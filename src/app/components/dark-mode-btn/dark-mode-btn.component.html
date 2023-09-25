@@ -1,0 +1,11 @@
+<button class="text-amber-300 overflow-hidden h-8 bg-sky-200 w-14  duration-700 rounded-3xl"
+[class.bg-sky-700]="isDarkMode"
+(click)="btnHandler()">
+  <div class="w-full origin-center duration-700" [class.rotate-180]="isDarkMode">
+    <svg class="h-8 w-full text-amber-400 dark:text-amber-500" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">  <path stroke="none" d="M0 0h24v24H0z"></path>  <circle cx="12" cy="12" r="4"></circle>  <path d="M3 12h1M12 3v1M20 12h1M12 20v1M5.6 5.6l.7 .7M18.4 5.6l-.7 .7M17.7 17.7l.7 .7M6.3 17.7l-.7 .7"></path>
+    </svg>
+    <svg class="h-8 w-full dark:text-yellow-300 rotate-90" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z"></path>
+    </svg>
+  </div>
+</button>
