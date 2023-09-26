@@ -3,3 +3,8 @@
 @tailwind components;
 @tailwind utilities;
 
+@layer utilities {
+  .calcHeight {
+    height: calc(100dvh - 2.5rem);
+  }
+}

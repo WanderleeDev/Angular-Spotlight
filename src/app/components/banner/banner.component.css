@@ -1,5 +1,0 @@
-.hit {
-  height: calc(100dvh - 2.5rem);
-  display: grid;
-  place-content: center;
-}
