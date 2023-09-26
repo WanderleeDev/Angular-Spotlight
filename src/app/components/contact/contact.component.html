@@ -1,4 +1,4 @@
-<div class="h-screen flex items-center justify-center p-12 py-6 overflow-hidden">
+<div id="contact" class="h-screen flex items-center justify-center p-12 py-6 overflow-hidden">
   <div class="mx-auto w-full max-w-screen-lg px-5 py-10">
     <div class="grid gap-5 md:grid-cols-2 md:gap-10 lg:gap-20">
       <article class="flex items-center">
@@ -19,7 +19,6 @@
             pattern="[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}"
             required/>
             <div class="text-red-600" *ngIf="mail.getError('email')">*Ingresa un formato de correo</div>
-{{mail.getError('email')}}
             <app-btn-form-submit [isDisabled]="FormContact.invalid"/>
           </form>
         </div>
