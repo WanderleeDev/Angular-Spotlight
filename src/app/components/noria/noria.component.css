@@ -1,0 +1,128 @@
+:host {
+  --size: 4.5rem;
+  --distancia: calc(var(--size) + 5rem);
+  --deg: 0deg;
+  --time: 30s;
+  --shadowColor: transparent;
+}
+
+.containerNoria {
+  display: none;
+  position: relative;
+}
+
+.noria {
+  position: relative;
+  display: grid;
+  place-items: center;
+  width: var(--size);
+  height: var(--size);
+  top: 30%;
+  left: 0;
+  transform: translate(-50%, -50%);
+  animation: rotateNoria var(--time) linear infinite;
+}
+
+.noria-eje {
+  top: 50%;
+  left: 50%;
+  transform: translate(0%, 30%) scale(.5);
+  background-color: white;
+  border-radius: 50%;
+  z-index: 50;
+}
+
+.noria-box {
+  position: absolute;
+  height: calc(var(--size) / 1.2);
+  width: calc(var(--size) / 1.2);
+  padding: 0.2rem;
+  transform: translate(
+    calc(cos(var(--deg)) * var(--distancia)),
+    calc(sin(var(--deg)) * var(--distancia))
+  );
+  filter: drop-shadow(2px 2px 4px var(--shadowColor));
+  &:hover {
+    filter: drop-shadow(-3px -3px 16px var(--shadowColor))
+    drop-shadow(3px 3px 16px var(--shadowColor));
+  }
+  transition: filter linear .2s;
+}
+
+.noria-box:nth-child(1){
+  --deg: calc((360deg / var(--imgCount) ) * 1);
+  --shadowColor: rgba(238, 0, 0, 0.3);
+}
+.noria-box:nth-child(2){
+  --deg: calc((360deg / var(--imgCount) ) * 2);
+  --shadowColor: rgba(0, 238, 99, 0.3);
+}
+.noria-box:nth-child(3){
+  --deg: calc((360deg / var(--imgCount) ) * 3);
+  --shadowColor: rgba(87, 238, 0, 0.3);
+}
+.noria-box:nth-child(4){
+  --deg: calc((360deg / var(--imgCount) ) * 4);
+  --shadowColor: rgba(48, 238, 0, 0.3);
+}
+.noria-box:nth-child(5){
+  --deg: calc((360deg / var(--imgCount) ) * 5);
+  --shadowColor: rgba(7, 248, 176, 0.3);
+}
+.noria-box:nth-child(6){
+  --deg: calc((360deg / var(--imgCount) ) * 6);
+  --shadowColor: rgba(117, 117, 117, 0.3);
+}
+.noria-box:nth-child(7){
+  --deg: calc((360deg / var(--imgCount) ) * 7);
+  --shadowColor: rgba(238, 155, 0, 0.3);
+}
+.noria-box:nth-child(8){
+  --deg: calc((360deg / var(--imgCount) ) * 8);
+  --shadowColor: rgba(0, 103, 238, 0.3);
+}
+
+.noria-img {
+  animation: rotateNoria var(--time) linear infinite reverse;
+}
+
+@keyframes rotateNoria {
+  0% {
+    transform: rotate(0);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+@media (min-width: 40rem) {
+  .containerNoria {
+    width: 15rem;
+    height: 15rem;
+    margin-inline: auto;
+    position: relative;
+    display: grid;
+    place-items: center;
+  }
+}
+
+@media screen and (min-width: 48rem) {
+  .noria {
+    top: 0;
+  }
+
+  .noria-eje {
+    transform: translate(0%, 0%) scale(.5);
+  }
+}
+
+@media screen and (min-width: 87.5rem) {
+  :host {
+    --size: 5rem;
+    --distancia: calc(var(--size) + 7rem);
+  }
+
+  .noria-eje {
+    transform: translate(0%, 0%) scale(.65);
+  }
+}

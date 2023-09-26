@@ -1,0 +1,11 @@
+<div class="containerNoria" [style.--imgCount]="getImgCount()">
+  <img class="noria-eje" ngSrc="../../../assets/images/angularGf.webp" alt="angular gif"
+  fill/>
+
+  <figure class="noria">
+      <div *ngFor="let path of pathsImages"
+        class="noria-box">
+        <img class="noria-img" [ngSrc]="path" alt="angular services logo" width="70" height="70">
+      </div>
+  </figure>
+</div>
