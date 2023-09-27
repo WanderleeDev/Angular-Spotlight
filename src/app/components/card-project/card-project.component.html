@@ -1,0 +1,22 @@
+<figure class="w-full h-72 relative borde-2 border-dotted border outline-dotted outline-offset-4 outline-1 outline-violet-200 group">
+  <div class="overflow-hidden relative w-full h-full  transition-opacity duration-300 opacity-0 group-hover:opacity-100 delay-150">
+    <img *ngIf="project.img, else errorImg"
+    [ngSrc]="project.img[0] | formatterUrl"
+    (error)="error(imgError)"
+    fill
+    class="z-20 object-cover"
+    alt="img">
+  </div>
+  <figcaption class="absolute inset-0 grid items-center text-xl font-semibold tracking-wide group-hover:z-50 group-hover:bg-gradient-to-t group-hover:from-purple-950/70 to-transparent bg-gradient-to-r duration-200">
+    {{project.title}}
+  </figcaption>
+  <app-card-btns [links]="links"/>
+</figure>
+
+<ng-template #errorImg>
+  <p class="absolute top-1/4 text-center w-full z-30 text-black select-none text-lg font-semibold">Image not found</p>
+  <img [ngSrc]="imgError"
+  class="z-20"
+  alt="imagen no disponible"
+  fill>
+</ng-template>

@@ -1,0 +1,16 @@
+<article
+  class="fixed inset-0 bg-black grid place-content-center z-50 opacity-0 duration-200 pointer-events-none delay-200"
+  [ngClass]="{
+    'opacity-100': isVisibleLightBox,
+    'pointer-events-auto': isVisibleLightBox
+  }">
+  <header>
+    <h3>Project</h3>
+    <button class="bg-close-svg font-black text-xl w-12 h-12 bg-purple-800 bg-min bg-center bg-no-repeat p-2 rounded-md hover:scale-110 active:scale-95 duration-200 border-purple-500 border-[1px] shadow-md shadow-purple-800"
+    (click)="closeLightBox()"
+    aria-label="close lightBox"></button>
+  </header>
+  <div>
+
+  </div>
+</article>

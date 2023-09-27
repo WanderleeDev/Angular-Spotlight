@@ -9,10 +9,11 @@ module.exports = {
     extend: {
       backgroundImage: {
         "hero-page": "url('src/assets/img/Sprinkle.svg')",
-        "view-svg": "url('src/assets/svg/eye-svgrepo-com.svg')",
+        "view-svg": "url('src/assets/svg/eye.svg')",
         "code-svg": "url('src/assets/svg/code.svg')",
         "gitHub-svg": "url('src/assets/svg/github.svg')",
         "angularGif": "url('src/assets/assets/angularGf.webp')",
+        "close-svg": "url('src/assets/svg/icon-close.svg')",
       },
       gridTemplateColumns: {
         'colResponsive': 'repeat(auto-fit, minmax(min(18.5rem, 100%), 1fr))'

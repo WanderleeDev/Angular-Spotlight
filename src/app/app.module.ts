@@ -13,6 +13,9 @@ import { CardBtnsComponent } from './components/card-btns/card-btns.component';
 import { ContactComponent } from './components/contact/contact.component';
 import { NoriaComponent } from './components/noria/noria.component';
 import { BtnFormSubmitComponent } from './components/btn-form-submit/btn-form-submit.component';
+import { CardProjectComponent } from './components/card-project/card-project.component';
+import { LightboxComponent } from './components/lightbox/lightbox.component';
+import { FormatterUrlPipe } from './pipes/formatter-url.pipe';
 
 @NgModule({
   declarations: [
@@ -25,7 +28,10 @@ import { BtnFormSubmitComponent } from './components/btn-form-submit/btn-form-su
     CardBtnsComponent,
     ContactComponent,
     NoriaComponent,
-    BtnFormSubmitComponent
+    BtnFormSubmitComponent,
+    CardProjectComponent,
+    LightboxComponent,
+    FormatterUrlPipe,
   ],
   imports: [
     BrowserModule,
