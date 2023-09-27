@@ -1,7 +1,8 @@
 import { Component, OnDestroy, OnInit } from '@angular/core';
 import { Subscription } from 'rxjs';
-import { LightboxManagerService } from 'src/app/services/lightbox-manager.service';
 import { HttpErrorResponse } from '@angular/common/http';
+//  services
+import { LightboxManagerService } from 'src/app/services/lightbox-manager.service';
 //  interface
 import { IProjects } from 'src/app/interfaces/IProject.interface';
 

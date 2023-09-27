@@ -8,7 +8,6 @@ module.exports = {
   theme: {
     extend: {
       backgroundImage: {
-        "hero-page": "url('src/assets/img/Sprinkle.svg')",
         "view-svg": "url('src/assets/svg/eye.svg')",
         "code-svg": "url('src/assets/svg/code.svg')",
         "gitHub-svg": "url('src/assets/svg/github.svg')",
