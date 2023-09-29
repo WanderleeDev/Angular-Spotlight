@@ -2,22 +2,22 @@
   <button type="button"
     class="bg-view-svg"
     [class]="btnCard"
-    [title]="'View more information of ' + links.name"
-    [attr.aria-label]="'View more information of ' + links.name"
-    (click)="lightBoxHandler()">
+    [title]="'View more information of ' + project.title"
+    [attr.aria-label]="'View more information of ' + project.title"
+    (click)="lightBoxHandler(project)">
   </button>
   <a class="bg-gitHub-svg"
     [class]="btnCard"
-    [href]="links.repositoryLink"
+    [href]="project.deploy.repository"
     target="_blank"
-    [attr.aria-label]="'go to GitHub ' + links.name"
-    [title]="'go to GitHub ' + links.name">
+    [attr.aria-label]="'go to GitHub ' + project.title"
+    [title]="'go to GitHub ' + project.title">
   </a>
   <a class="bg-code-svg"
     [class]="btnCard"
-    [href]="links.demoLink"
+    [href]="project.deploy.path"
     target="_blank"
-    [attr.aria-label]="'go to demo ' + links.name"
-    [title]="'go to demo ' + links.name">
+    [attr.aria-label]="'go to demo ' + project.title"
+    [title]="'go to demo ' + project.title">
   </a>
 </div>

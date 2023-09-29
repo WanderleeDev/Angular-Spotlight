@@ -16,6 +16,8 @@ import { BtnFormSubmitComponent } from './components/btn-form-submit/btn-form-su
 import { CardProjectComponent } from './components/card-project/card-project.component';
 import { LightboxComponent } from './components/lightbox/lightbox.component';
 import { FormatterUrlPipe } from './pipes/formatter-url.pipe';
+import { ImageViewerComponent } from './components/lightbox/components/image-viewer/image-viewer.component';
+import { LightboxControllerComponent } from './components/lightbox/components/lightbox-controller/lightbox-controller.component';
 
 @NgModule({
   declarations: [
@@ -32,6 +34,8 @@ import { FormatterUrlPipe } from './pipes/formatter-url.pipe';
     CardProjectComponent,
     LightboxComponent,
     FormatterUrlPipe,
+    ImageViewerComponent,
+    LightboxControllerComponent,
   ],
   imports: [
     BrowserModule,

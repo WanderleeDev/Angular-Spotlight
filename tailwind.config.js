@@ -19,6 +19,9 @@ module.exports = {
       },
       backgroundSize: {
         "min": '1.7rem'
+      },
+      zIndex: {
+        '60': 60
       }
     },
   },
