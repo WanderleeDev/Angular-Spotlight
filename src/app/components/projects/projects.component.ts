@@ -1,5 +1,4 @@
 import { Component } from '@angular/core';
-import { Subscription } from 'rxjs';
 import { IProjects } from 'src/app/interfaces/IProject.interface';
 import { ProjectsService } from 'src/app/services/projects.service';
 
@@ -10,8 +9,6 @@ import { ProjectsService } from 'src/app/services/projects.service';
 })
 export class ProjectsComponent {
   listProjects: IProjects[] = [];
-  lightBoSub = new Subscription();
-  isViewLightBox!: boolean;
 
   constructor(
     private projectsSvc: ProjectsService,

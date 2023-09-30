@@ -6,6 +6,7 @@ import { LightboxManagerService } from 'src/app/services/lightbox-manager.servic
   templateUrl: './card-btns.component.html',
 })
 export class CardBtnsComponent {
+  @Input() hasBtnComplementary = true
   @Input() project!: IProjects;
   btnCard = 'h-8 w-8 bg-no-repeat bg-purple-800 bg-min bg-center p-2 rounded-md hover:scale-110 active:scale-95 duration-200 border-purple-500 border-[1px] shadow-md shadow-purple-800';
 
@@ -14,8 +15,7 @@ export class CardBtnsComponent {
   ) {}
 
   public lightBoxHandler(data: IProjects) {
-    this.lightboxManagerSvc.appearLightBoxToggle();
+    this.lightboxManagerSvc.setIsVisible();
     this.lightboxManagerSvc.setDataLightBox(data)
-    console.log(this.project);
   }
 }

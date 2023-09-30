@@ -17,7 +17,8 @@ import { CardProjectComponent } from './components/card-project/card-project.com
 import { LightboxComponent } from './components/lightbox/lightbox.component';
 import { FormatterUrlPipe } from './pipes/formatter-url.pipe';
 import { ImageViewerComponent } from './components/lightbox/components/image-viewer/image-viewer.component';
-import { LightboxControllerComponent } from './components/lightbox/components/lightbox-controller/lightbox-controller.component';
+import { TagsContainerComponent } from './components/lightbox/components/tags-container/tags-container.component';
+import { DescriptionProjectComponent } from './components/lightbox/components/description-project/description-project.component';
 
 @NgModule({
   declarations: [
@@ -35,7 +36,8 @@ import { LightboxControllerComponent } from './components/lightbox/components/li
     LightboxComponent,
     FormatterUrlPipe,
     ImageViewerComponent,
-    LightboxControllerComponent,
+    TagsContainerComponent,
+    DescriptionProjectComponent,
   ],
   imports: [
     BrowserModule,

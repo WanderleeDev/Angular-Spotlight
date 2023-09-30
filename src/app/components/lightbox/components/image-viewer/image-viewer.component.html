@@ -1,7 +1,7 @@
-<figure class="relative h-72 w-12/12 overflow-y-scroll borde-2 border-dotted border outline-dotted outline-offset-4 outline-1 outline-violet-200 group scrollStyle scrollWidthMin mx-auto sm:w-10/12">
-  <img class="object-cover h-full w-full"
-    ngSrc="https://www.dropbox.com/scl/fi/8gerwgsrti6wqd5mdocdt/helpPage.webp?rlkey=9zu7qc2xdfwlepzlm5sfdwta2&raw=1"
-    alt="s"
+<figure class="relative h-60 w-12/12 overflow-y-scroll overflow-x-hidden borde-2 border-dotted border outline-dotted outline-offset-4 outline-1 outline-violet-200 group scrollStyle scrollWidthMin mx-auto sm:w-10/12 sm:h-80">
+  <img class=" h-auto w-full object-cover"
+    [src]="mainImg"
+    alt="image initial"
     fill>
   <figcaption class="absolute z-50 bottom-0 px-4 m-1 rounded-lg bg-purple-800 block">
     Image
@@ -10,21 +10,12 @@
 
 <div class="grid gap-4 grid-cols-3 mt-12 justify-items-center">
   <button class="border-white border relative w-16 h-16"
-    aria-label="change image 1">
-    <img ngSrc="https://www.dropbox.com/scl/fi/8gerwgsrti6wqd5mdocdt/helpPage.webp?rlkey=9zu7qc2xdfwlepzlm5sfdwta2&raw=1"
-      alt="s"
+    *ngFor="let img of listImages, index as i"
+    [attr.aria-label]="'change image ' + (i + 1)"
+    (click)="changeImage(img)">
+    <img [ngSrc]="img"
+      [alt]="'image ' + (i + 1)"
       fill>
-  </button>
-  <button class="border-white border relative w-16 h-16"
-    aria-label="change image 1">
-    <img ngSrc="https://www.dropbox.com/scl/fi/8gerwgsrti6wqd5mdocdt/helpPage.webp?rlkey=9zu7qc2xdfwlepzlm5sfdwta2&raw=1"
-      alt="s"
-      fill>
-  </button>
-  <button class="border-white border relative w-16 h-16"
-    aria-label="change image 1">
-    <img ngSrc="https://www.dropbox.com/scl/fi/8gerwgsrti6wqd5mdocdt/helpPage.webp?rlkey=9zu7qc2xdfwlepzlm5sfdwta2&raw=1"
-      alt="s"
-      fill>
+      {{i + 1}}
   </button>
 </div>

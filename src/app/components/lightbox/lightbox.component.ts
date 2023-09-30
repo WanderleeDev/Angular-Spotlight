@@ -30,10 +30,9 @@ export class LightboxComponent implements OnInit, OnDestroy{
       this.lightBoxSub.unsubscribe();
       console.log('fin');
       console.log(this.isVisibleLightBox);
-
   }
 
   closeLightBox() {
-    this.lightboxManagerSvc.appearLightBoxToggle();
+    this.lightboxManagerSvc.setIsVisible();
   }
 }

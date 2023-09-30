@@ -27,4 +27,9 @@
       width: .5rem;
     }
   }
+  .scrollWidNone {
+    &::-webkit-scrollbar {
+      width: 0rem;
+    }
+  }
 }

@@ -1,5 +1,6 @@
 <div class="flex gap-8 justify-center relative z-50 duration-200 opacity-0 pointer-events-none group-hover:opacity-100 group-hover:-translate-y-10 group-hover:pointer-events-auto">
-  <button type="button"
+  <button *ngIf="hasBtnComplementary"
+    type="button"
     class="bg-view-svg"
     [class]="btnCard"
     [title]="'View more information of ' + project.title"

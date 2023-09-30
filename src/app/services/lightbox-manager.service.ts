@@ -22,9 +22,8 @@ export class LightboxManagerService {
     this.lightBoxData.next(data)
   }
 
-  appearLightBoxToggle() {
-    const newValue = !this.isVisibleLightBox.value;
-    this.isVisibleLightBox.next(newValue)
-    console.log(this.isVisibleLightBox.value);
+  setIsVisible () {
+    this.isVisibleLightBox.next(!this.isVisibleLightBox.value)
   }
+
 }

@@ -2,7 +2,7 @@
 
   <div class="overflow-hidden relative w-full h-full  transition-opacity duration-300 opacity-0 group-hover:opacity-100 delay-150">
     <img *ngIf="project.img, else errorImg"
-    [ngSrc]="project.img[0] | formatterUrl"
+    [ngSrc]="project.img[0]"
     (error)="error(imgError)"
     fill
     class="z-20 object-cover"
