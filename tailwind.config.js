@@ -15,10 +15,19 @@ module.exports = {
         "close-svg": "url('src/assets/svg/icon-close.svg')",
       },
       gridTemplateColumns: {
-        'colResponsive': 'repeat(auto-fit, minmax(min(18.5rem, 100%), 1fr))'
+        'colResponsive': 'repeat(auto-fit, minmax(min(18.5rem, 100%), 1fr))',
       },
       backgroundSize: {
         "min": '1.7rem'
+      },
+      keyframes: {
+        appearBox: {
+          '0%': { opacity: 0 },
+          '100%': { opacity: 1 },
+        }
+      },
+      animation: {
+        'appearBox': 'appearBox 0.2s linear forwards',
       },
       zIndex: {
         '60': 60

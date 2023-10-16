@@ -61,9 +61,9 @@ export class ProjectsService {
     {
       title: 'WebVentory',
       img: [
-        'https://www.dropbox.com/scl/fi/aynlw6q5d7zkmzjvid9em/webVentory.webp?rlkey=rp50yucxgno1zrfo0amhybv5e&raw=1',
+        'https://www.dropbox.com/scl/fi/zo78ch0e4yt2wmhnxr5g4/webVentory-Mockup.png?rlkey=wn4xtlvqzyyjtqjqesukwqk3x&raw=1',
         'https://www.dropbox.com/scl/fi/l6ek1u0ppcq5bi18bly7h/webVentory-fullPage.webp?rlkey=s02pg2usar0fjqlxar2n8fn8d&raw=1',
-        'https://www.dropbox.com/scl/fi/gk0okej1s4szuovj486yz/webVentory-mobile.webp?rlkey=r017ekqf5ikgpmfq5502kfyv8&raw=1'
+        'https://www.dropbox.com/scl/fi/86op12i5gaecx3v920vx8/webVentoryRes.webp?rlkey=i2n9vofvpkofrcko2bplfzk0g&raw=1'
       ],
       description: 'Web page of a simple inventory that is saved in a table, you can create several tables, such as delete them. Use of reactive forms and communication between components.',
       technologies: ['Angular', 'TypeScript', 'Scss'],
