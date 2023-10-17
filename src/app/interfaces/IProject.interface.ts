@@ -1,5 +1,7 @@
 export interface IProjects {
   title: string,
+  cover: string,
+  video: string
   img: Array<string>,
   description: string,
   technologies: Array<string>,

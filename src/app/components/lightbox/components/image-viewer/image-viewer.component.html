@@ -1,4 +1,4 @@
-<figure class="relative h-60 w-12/12 overflow-y-scroll overflow-x-hidden borde-2 border-dotted border outline-dotted outline-offset-4 outline-1 outline-violet-200 group scrollStyle scrollWidthMin mx-auto sm:w-10/12 sm:h-80">
+<figure class="relative h-auto w-12/12 overflow-y-scroll overflow-x-hidden borde-2 border-dotted border outline-dotted outline-offset-4 outline-1 outline-violet-200 group scrollStyle scrollWidthMin mx-auto sm:max-w-lg sm:h-80">
   <img class=" h-auto w-full object-cover"
     [src]="mainImg"
     alt="image initial"
@@ -8,7 +8,7 @@
   </figcaption>
 </figure>
 
-<div class="grid gap-4 grid-cols-3 mt-12 justify-items-center">
+<div class="flex flex-wrap gap-4 justify-center mt-12 justify-items-center">
   <button class="border-white border relative w-16 h-16"
     *ngFor="let img of listImages, index as i"
     [attr.aria-label]="'change image ' + (i + 1)"
@@ -16,6 +16,12 @@
     <img [ngSrc]="img"
       [alt]="'image ' + (i + 1)"
       fill>
-      {{i + 1}}
+    {{i + 1}}
+  </button>
+  <button class="border-purple-800 border-2 relative w-16 h-16 bg-play-svg bg-no-repeat bg-base-size bg-center bg-white"
+    title="video demo"
+    aria-label="video demo"
+    type="button"
+    (click)="appearIframe()">
   </button>
 </div>

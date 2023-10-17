@@ -27,9 +27,18 @@
       width: .5rem;
     }
   }
+
   .scrollWidNone {
     &::-webkit-scrollbar {
       width: 0rem;
     }
+  }
+
+  .text-stroke {
+    -webkit-text-stroke: .1rem rgb(255, 255, 255);
+  }
+
+  .text-shadow {
+    text-shadow: rgb(241, 241, 241) 0.18rem 0.18rem .1rem;
   }
 }

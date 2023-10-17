@@ -5,7 +5,7 @@
     'animate-appearBox': isVisibleLightBox,
   }">
   <header class=" content-center self-center">
-    <h3 class="relative block text-2xl sm:text-5xl text-white md:text-8xl font-bold text-right bg-violet-900/30 backdrop-blur-[.1rem] p-8 after:absolute after:bg-black/10 after:backdrop-blur-[.4rem] after:inset-0 sm:p-8 tracking-widest">
+    <h3 class="relative block text-2xl sm:text-5xl  md:text-8xl font-bold text-right bg-violet-900/30 backdrop-blur-[.1rem] p-8 after:absolute after:bg-black/10 after:backdrop-blur-[.4rem] after:inset-0 sm:p-8 tracking-widest text-stroke text-transparent text-shadow">
       {{projectData.title }}
     </h3>
   </header>
@@ -14,9 +14,14 @@
     aria-label="close lightBox"
     (click)="closeLightBox()">
     </button>
+
     <div class="grid gap-8 lg:grid-cols-2">
       <app-image-viewer [listImages]="projectData.img"/>
       <app-description-project [projectData]="projectData"/>
     </div>
   </div>
+  <app-iframe-demo *ngIf="isViewIframe"
+    [iframeUrl]="projectData.video"
+    [iframeTitle]="projectData.title"
+    class="bg-[#040404] fixed inset-0 z-60"/>
 </article>

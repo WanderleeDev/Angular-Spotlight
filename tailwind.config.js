@@ -13,12 +13,14 @@ module.exports = {
         "gitHub-svg": "url('src/assets/svg/github.svg')",
         "angularGif": "url('src/assets/assets/angularGf.webp')",
         "close-svg": "url('src/assets/svg/icon-close.svg')",
+        "play-svg": "url('src/assets/svg/play.svg')",
       },
       gridTemplateColumns: {
         'colResponsive': 'repeat(auto-fit, minmax(min(18.5rem, 100%), 1fr))',
       },
       backgroundSize: {
-        "min": '1.7rem'
+        "min": '1.7rem',
+        "base-size": '3rem'
       },
       keyframes: {
         appearBox: {

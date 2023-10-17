@@ -19,6 +19,7 @@ import { FormatterUrlPipe } from './pipes/formatter-url.pipe';
 import { ImageViewerComponent } from './components/lightbox/components/image-viewer/image-viewer.component';
 import { TagsContainerComponent } from './components/lightbox/components/tags-container/tags-container.component';
 import { DescriptionProjectComponent } from './components/lightbox/components/description-project/description-project.component';
+import { IframeDemoComponent } from './components/iframe-demo/iframe-demo.component';
 
 @NgModule({
   declarations: [
@@ -38,6 +39,7 @@ import { DescriptionProjectComponent } from './components/lightbox/components/de
     ImageViewerComponent,
     TagsContainerComponent,
     DescriptionProjectComponent,
+    IframeDemoComponent,
   ],
   imports: [
     BrowserModule,
