@@ -10,6 +10,7 @@
 
 <div class="flex flex-wrap gap-4 justify-center mt-12 justify-items-center">
   <button class="border-white border relative w-16 h-16"
+    type="button"
     *ngFor="let img of listImages, index as i"
     [attr.aria-label]="'change image ' + (i + 1)"
     (click)="changeImage(img)">

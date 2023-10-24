@@ -47,19 +47,19 @@ export class ProjectsService {
     },
     {
       title: 'Backstage Talks',
-      cover: '',
-      video: '',
+      cover: 'https://www.dropbox.com/scl/fi/mo9pndme7qffroy6ce8gj/backStageCover.webp?rlkey=thb01ghyvjzm3t5z7cf6a9bk1&raw=1',
+      video: 'https://www.loom.com/embed/6f3e1295b9f04569af2aa1fc947cefe7?sid=564a17e4-01e7-45bc-9fd1-619d6b9bcbd2',
       img: [
         'https://www.dropbox.com/scl/fi/aynlw6q5d7zkmzjvid9em/webVentory.webp?rlkey=rp50yucxgno1zrfo0amhybv5e&raw=1',
         'https://www.dropbox.com/scl/fi/l6ek1u0ppcq5bi18bly7h/webVentory-fullPage.webp?rlkey=s02pg2usar0fjqlxar2n8fn8d&raw=1',
-        'https://www.dropbox.com/scl/fi/gk0okej1s4szuovj486yz/webVentory-mobile.webp?rlkey=r017ekqf5ikgpmfq5502kfyv8&raw=1'
+        'https://www.dropbox.com/scl/fi/vwvrsnwnbsng8jac75m7t/backStageRes.webp?rlkey=yam0qsxf243yf3tlzu4i97xcf&raw=1'
       ],
       description: 'Copy an entry page as changing images by scrolling, each new image changes the background color of the page. Styles applied with Scss in addition to conditional styles ',
-      technologies: ['Angular', 'TypeScript', 'TailwindCss'],
-      extraTools: [],
+      technologies: ['Angular', 'TypeScript', 'Scss'],
+      extraTools: ['IntersectionObserver'],
       deploy: {
         repository: 'https://github.com/WanderleeDev/miniProyectsAngular/tree/main/BackstageTalks',
-        path: 'https://gleaming-lebkuchen-8e52b2.netlify.app/',
+        path: 'https://backstage-talks-lt25a6f36-wanderleedev.vercel.app/#issue1',
         platform: 'Netlify',
         icon: 'https://www.dropbox.com/scl/fi/nv0sqziekl57wa2qg4jjs/netlify.svg?rlkey=mhea6i30zfcdby88irn2ftxay&raw=1'
       }
@@ -118,6 +118,25 @@ export class ProjectsService {
         repository: 'https://github.com/WanderleeDev/FrontendMentorChallenges/tree/main/ipAddress',
         path: 'https://650608deef6fec4371b2c449--venerable-sherbet-350882.netlify.app/',
         platform: 'Netlify',
+        icon: 'https://www.dropbox.com/scl/fi/nv0sqziekl57wa2qg4jjs/netlify.svg?rlkey=mhea6i30zfcdby88irn2ftxay&raw=1'
+      }
+    },
+    {
+      title: 'REST Countries',
+      cover: 'https://www.dropbox.com/scl/fi/ir1scbop2ry5zsso9yczx/CountryCover.webp?rlkey=r6tjw6yahunoax9zeznkydwx2&raw=1',
+      video: 'https://www.loom.com/embed/78185872801e486f92eb90b21e9a07b5?sid=87c7d1e7-4e8e-467c-83cd-5037a4e6119c',
+      img: [
+        'https://www.dropbox.com/scl/fi/z7vsoxgith007o9qe0fhj/ipAddress.webp?rlkey=530vre2yeor23bb9gx7rbq0m1&raw=1',
+        'https://www.dropbox.com/scl/fi/zn8crem6depkyyvnb3jxv/ipAddress-FullPage.webp?rlkey=oh695z72vpuavju1obny1gq59&raw=1',
+        'https://www.dropbox.com/scl/fi/t162q6omzpgnwjx3pllkn/CountryRes.webp?rlkey=v2ub1ugynnxxfd9i50wu7tc7y&raw=1'
+      ],
+      description: 'Page developed with Angular, it consumes an api that provides country information to re-enderize content, allows searching by name or also by selecting continent in the drop-down menu, implementation of routes and use of observables to share data and use of the Flobite component library',
+      technologies: ['Angular', 'TypeScript', 'TailwindCss'],
+      extraTools: ['RestCountry API', 'Flobite'],
+      deploy: {
+        repository: 'https://github.com/WanderleeDev/miniProyectsAngular/tree/main/restCountries',
+        path: 'https://rest-countries-c20tt2xl0-wanderleedev.vercel.app/',
+        platform: 'Vercel',
         icon: 'https://www.dropbox.com/scl/fi/nv0sqziekl57wa2qg4jjs/netlify.svg?rlkey=mhea6i30zfcdby88irn2ftxay&raw=1'
       }
     }
