@@ -2,7 +2,13 @@
   <div class="grid gap-4 content-start sm:text-lg">
     <h3 class="font-semibold text-2xl">{{projectData.title}}</h3>
     <div class="mx-auto flex gap-8 sm:m-0">
-      <a class="block hover:underline text-purple-400" [href]="projectData.deploy.path">Demo</a>
+      <a class="flex gap-2 hover:underline text-purple-400 realtive" [href]="projectData.deploy.path">
+        Demo
+        <img [ngSrc]="projectData.deploy.icon"
+          [alt]="projectData.deploy.platform"
+          width="25"
+          height="25">
+      </a>
       <a class="block hover:underline text-purple-400" [href]="projectData.deploy.repository">Repository</a>
     </div>
     <p class="lg:max-w-[60ch]">
