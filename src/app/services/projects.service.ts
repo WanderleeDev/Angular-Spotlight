@@ -60,8 +60,8 @@ export class ProjectsService {
       deploy: {
         repository: 'https://github.com/WanderleeDev/miniProyectsAngular/tree/main/BackstageTalks',
         path: 'https://backstage-talks-lt25a6f36-wanderleedev.vercel.app/#issue1',
-        platform: 'Netlify',
-        icon: 'https://www.dropbox.com/scl/fi/nv0sqziekl57wa2qg4jjs/netlify.svg?rlkey=mhea6i30zfcdby88irn2ftxay&raw=1'
+        platform: 'Vercel',
+        icon: 'https://www.dropbox.com/scl/fi/54fy80ntgxl4afsmrcn25/vercel.webp?rlkey=ogmc9sw41hnde3c45jxu01lmk&raw=1'
       }
     },
     {
@@ -80,7 +80,7 @@ export class ProjectsService {
         repository: 'https://github.com/WanderleeDev/firstWebAngular',
         path: 'https://first-web-angular.vercel.app/',
         platform: 'Vercel',
-        icon: 'https://www.dropbox.com/scl/fi/nv0sqziekl57wa2qg4jjs/netlify.svg?rlkey=mhea6i30zfcdby88irn2ftxay&raw=1'
+        icon: 'https://www.dropbox.com/scl/fi/54fy80ntgxl4afsmrcn25/vercel.webp?rlkey=ogmc9sw41hnde3c45jxu01lmk&raw=1'
       }
     },
     {
@@ -137,7 +137,45 @@ export class ProjectsService {
         repository: 'https://github.com/WanderleeDev/miniProyectsAngular/tree/main/restCountries',
         path: 'https://rest-countries-c20tt2xl0-wanderleedev.vercel.app/',
         platform: 'Vercel',
-        icon: 'https://www.dropbox.com/scl/fi/nv0sqziekl57wa2qg4jjs/netlify.svg?rlkey=mhea6i30zfcdby88irn2ftxay&raw=1'
+        icon: 'https://www.dropbox.com/scl/fi/54fy80ntgxl4afsmrcn25/vercel.webp?rlkey=ogmc9sw41hnde3c45jxu01lmk&raw=1'
+      }
+    },
+    {
+      title: 'Translate App',
+      cover: 'https://www.dropbox.com/scl/fi/y540ktuw18bwoj4yr2hse/tranaslateApp-mockud.webp?rlkey=6aidbciq96v3du6nelexwisal&raw=1',
+      video: 'https://www.loom.com/embed/31b761275fba40c0878be64e025bb5c6?sid=c30dede9-fd30-472c-b63a-cde96d4c94d0',
+      img: [
+        'https://www.dropbox.com/scl/fi/kagayvcfay2kz20idi5hv/translateApp.webp?rlkey=4ygu3y0juppg5a2btb8npqv7l&raw=1',
+        'https://www.dropbox.com/scl/fi/zn8crem6depkyyvnb3jxv/ipAddress-FullPage.webp?rlkey=oh695z72vpuavju1obny1gq59&raw=1',
+        'https://www.dropbox.com/scl/fi/um9cerhf4d9nnbilfm9z6/translateApp-res.webp?rlkey=gufcf9enu94mki7aiqmwsc20k&raw=1'
+      ],
+      description: "Developed in angular 17, following the indications of DevChallenges. Sending parameters in the url and implementing text-to-speech reading using the browser's native API. Designed with mobile first and responsive design in mind.",
+      technologies: ['Angular', 'TypeScript', 'TailwindCss'],
+      extraTools: ['MYmemory API', 'speechSynthesis'],
+      deploy: {
+        repository: 'https://github.com/WanderleeDev/DevChallenges/tree/main/Frontend/translate-app',
+        path: 'https://translate-app-six.vercel.app/',
+        platform: 'Vercel',
+        icon: 'https://www.dropbox.com/scl/fi/54fy80ntgxl4afsmrcn25/vercel.webp?rlkey=ogmc9sw41hnde3c45jxu01lmk&raw=1'
+      }
+    },
+    {
+      title: 'Coffee Listing',
+      cover: 'https://www.dropbox.com/scl/fi/16mgbwq3kf5ow6mwrwds4/coffee-list-mockup.webp?rlkey=w2av0l7j2f3ff1h8ngqajr2jk&raw=1',
+      video: 'https://www.loom.com/embed/b57ae73830f645e49d9497c2f8c0d05c?sid=f603a996-2da8-4d54-96b6-286f6ed7ac48',
+      img: [
+        'https://www.dropbox.com/scl/fi/mwoehad6cxplq05veko4b/coffee-list-screen.webp?rlkey=tfj8t8zgckjuw2oh4b3nlg4ap&raw=1',
+        'https://www.dropbox.com/scl/fi/zn8crem6depkyyvnb3jxv/ipAddress-FullPage.webp?rlkey=oh695z72vpuavju1obny1gq59&raw=1',
+        'https://www.dropbox.com/scl/fi/3r5vbp9z7n5egy59pkmyd/coffee-list-res.webp?rlkey=vv0j3oxartgkxe5w4zuj13c2r&raw=1'
+      ],
+      description: "Developed with Angular 17, testing for the first time the new syntax and lazy view loading. Using HTTPClient to consume a simple list and filter it.",
+      technologies: ['Angular', 'TypeScript', 'TailwindCss'],
+      extraTools: [],
+      deploy: {
+        repository: 'https://github.com/WanderleeDev/DevChallenges/tree/main/Frontend/coffee-listing',
+        path: 'https://coffee-page.vercel.app/',
+        platform: 'Vercel',
+        icon: 'https://www.dropbox.com/scl/fi/54fy80ntgxl4afsmrcn25/vercel.webp?rlkey=ogmc9sw41hnde3c45jxu01lmk&raw=1'
       }
     }
   ];

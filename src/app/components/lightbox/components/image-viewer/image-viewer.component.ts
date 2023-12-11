@@ -1,4 +1,5 @@
 import { Component, Input, OnInit } from '@angular/core';
+import { IDeploy } from 'src/app/interfaces/IProject.interface';
 // services
 import { IframeManagerService } from 'src/app/services/iframe-manager.service';
 
@@ -7,8 +8,9 @@ import { IframeManagerService } from 'src/app/services/iframe-manager.service';
   templateUrl: './image-viewer.component.html'
 })
 export class ImageViewerComponent implements OnInit{
-  @Input() listImages!: string[];
-  mainImg!: string;
+  @Input() listImages: string[] = [];
+  @Input() deploy!: IDeploy;
+  mainImg = '';
 
   constructor (private iframeManagerSvc: IframeManagerService) {}
 
@@ -19,7 +21,7 @@ export class ImageViewerComponent implements OnInit{
   public changeImage(img: string) {
     this.mainImg = img;
   }
-  
+
   public appearIframe() {
     this.iframeManagerSvc.toggleIframeView()
   }

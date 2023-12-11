@@ -20,6 +20,7 @@ module.exports = {
       },
       backgroundSize: {
         "min": '1.7rem',
+        "min-2": '1.5rem',
         "base-size": '3rem'
       },
       keyframes: {

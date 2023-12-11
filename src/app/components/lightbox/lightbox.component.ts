@@ -35,8 +35,6 @@ export class LightboxComponent implements OnInit, OnDestroy{
 
     ngOnDestroy(): void {
       this.lightBoxSub.unsubscribe();
-      console.log('fin');
-      console.log(this.isVisibleLightBox);
   }
 
   closeLightBox() {

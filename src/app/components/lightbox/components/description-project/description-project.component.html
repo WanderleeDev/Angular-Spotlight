@@ -1,17 +1,27 @@
-<article class="flex flex-col gap-16 sm:w-[80%] sm:mx-auto lg:w-auto sm:m-auto">
+<article
+  class="flex flex-col gap-16 sm:w-[80%] sm:mx-auto lg:w-auto sm:m-auto"
+>
   <div class="grid gap-4 content-start sm:text-lg">
-    <h3 class="font-semibold text-2xl">{{projectData.title}}</h3>
+    <h3 class="font-semibold text-2xl">
+      {{projectData.title}}
+    </h3>
     <div class="mx-auto flex gap-8 sm:m-0">
-      <a class="flex gap-2 hover:underline text-purple-400 realtive" [href]="projectData.deploy.path">
+      <a
+        class="block hover:underline text-purple-400"
+        [href]="projectData.deploy.path"
+        target="_blank" rel="noopener noreferrer"
+      >
         Demo
-        <img [ngSrc]="projectData.deploy.icon"
-          [alt]="projectData.deploy.platform"
-          width="25"
-          height="25">
       </a>
-      <a class="block hover:underline text-purple-400" [href]="projectData.deploy.repository">Repository</a>
+      <a
+        class="block hover:underline text-purple-400"
+        [href]="projectData.deploy.repository"
+        target="_blank" rel="noopener noreferrer"
+      >
+        Repository
+      </a>
     </div>
-    <p class="lg:max-w-[60ch]">
+    <p class="lg:max-w-[60ch] text-balance">
       {{projectData.description}}
     </p>
   </div>
@@ -21,11 +31,12 @@
         [listTag]="projectData.technologies"
         groupTagName="Tools"
         colorTag="bg-purple-800"
-        />
+      />
       <app-tags-container
-      *ngIf="projectData.extraTools.length"
-      [listTag]="projectData.extraTools"
-      groupTagName="Extra"
-      colorTag="bg-blue-800"/>
+        *ngIf="projectData.extraTools.length"
+        [listTag]="projectData.extraTools"
+        groupTagName="Extra"
+        colorTag="bg-blue-800"
+      />
   </aside>
 </article>

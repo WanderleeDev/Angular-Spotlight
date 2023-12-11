@@ -8,6 +8,10 @@
     height: calc(100dvh - 2.5rem);
   }
 
+  .text-balance {
+    text-wrap: pretty;
+  }
+
   .scrollStyle {
     &::-webkit-scrollbar {
       width: .9rem;

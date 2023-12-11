@@ -17,7 +17,8 @@
     </button>
 
     <div class="grid gap-8 lg:grid-cols-2">
-      <app-image-viewer [listImages]="projectData.img"/>
+      <app-image-viewer [listImages]="projectData.img"
+        [deploy]="projectData.deploy"/>
       <app-description-project [projectData]="projectData"/>
     </div>
   </div>

@@ -1,10 +1,18 @@
-<figure class="relative h-auto w-12/12 overflow-y-scroll overflow-x-hidden borde-2 border-dotted border outline-dotted outline-offset-4 outline-1 outline-violet-200 group scrollStyle scrollWidthMin mx-auto sm:max-w-lg sm:h-80">
-  <img class=" h-auto w-full object-cover"
+<figure class="relative h-auto w-12/12 overflow-x-hidden borde-2 border-dotted border outline-dotted outline-offset-4 outline-1 outline-violet-200 group scrollStyle scrollWidthMin mx-auto sm:max-w-lg sm:h-80">
+  <img class=" h-full w-full object-cover"
     [src]="mainImg"
     alt="image initial"
-    fill>
-  <figcaption class="absolute z-50 bottom-0 px-4 m-1 rounded-lg bg-purple-800 block">
-    Image
+    fill
+  >
+  <figcaption class="absolute z-50 bottom-0 px-4 m-1 rounded-lg bg-purple-800 flex gap-2 items-center">
+    <span>
+      <strong>Deploy: </strong>
+      {{deploy.platform }}
+    </span>
+    <span class="block h-8 w-8 bg-no-repeat bg-min-2 bg-center text-xs bg-black rounded-[50%] m-1"
+      [style.background-image]="'url(' + deploy.icon + ')'"
+    >
+    </span>
   </figcaption>
 </figure>
 
@@ -13,16 +21,16 @@
     type="button"
     *ngFor="let img of listImages, index as i"
     [attr.aria-label]="'change image ' + (i + 1)"
-    (click)="changeImage(img)">
-    <img [ngSrc]="img"
-      [alt]="'image ' + (i + 1)"
-      fill>
+    (click)="changeImage(img)"
+  >
+  <img [ngSrc]="img" [alt]="'image ' + (i + 1)"fill>
     {{i + 1}}
   </button>
   <button class="border-purple-800 border-2 relative w-16 h-16 bg-play-svg bg-no-repeat bg-base-size bg-center bg-white"
     title="video demo"
     aria-label="video demo"
     type="button"
-    (click)="appearIframe()">
+    (click)="appearIframe()"
+  >
   </button>
 </div>
