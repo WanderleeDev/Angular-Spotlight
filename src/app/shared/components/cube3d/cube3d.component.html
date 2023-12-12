@@ -1,8 +1,9 @@
 <div class="cube">
-  <div class="side side-A enfrente"></div>
-  <div class="side side-B atras"></div>
-  <div class="side side-C arriba"></div>
-  <div class="side side-D abajo"></div>
-  <div class="side side-E izquierda"></div>
-  <div class="side side-F derecha"></div>
+  <div
+    *ngFor="let side of cubeSides"
+    class="side"
+    [class]="'side-'+ side"
+  >
+    <app-angular [sizes]="{ width: 40, height: 40 }"/>
+  </div>
 </div>

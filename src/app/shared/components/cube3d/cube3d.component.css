@@ -1,12 +1,12 @@
-:host {
+/* :host {
   display: contents;
-}
+} */
 
 .cube {
   --cube-clr: rgba(15, 11, 248, 0.2);
   --cube-border: rgba(0, 132, 255, 0.7);
   --time: 8s;
-  display: none;
+  /* display: none; */
   perspective: 800px;
 	transform-style: preserve-3d;
 	width: 50px;
@@ -27,6 +27,8 @@
 }
 
 .side{
+  display: grid;
+  place-content: center;
 	transition: background-color linear .2s, border-color linear .2s;
 	position: absolute;
 	height: 50px;
@@ -82,8 +84,8 @@
 		}
 }
 
-@media screen and (min-width : 40rem) {
+/* @media screen and (min-width : 40rem) {
   .cube {
     display: block;
   }
-}
+} */

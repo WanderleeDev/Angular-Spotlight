@@ -1,7 +1,9 @@
-<nav class="py-4 rounded-md z-10">
-  <ul class="flex  gap-4 text-white font-medium text-base" #nav>
-    <li *ngFor="let data of dataNav">
+<nav class="py-4 rounded-md z-10 px-6">
+  <ul class="flex  gap-4 text-white font-medium text-base">
+    <li *ngFor="let data of dataNav; let i = index">
       <button
+        (click)="handleCLick(i, data.name)"
+        [ngClass]=" {'bg-purple-600': i === 0 }"
         type="button"
         class="flex items-center gap-2 rounded-md p-1 px-2 relative btn hover:scale-105 active:scale-95 transition-transform"
         [title]="data.name"

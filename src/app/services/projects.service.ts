@@ -1,6 +1,7 @@
 import { Injectable } from '@angular/core';
 //  interface
 import { IProjects } from '../interfaces/IProject.interface';
+import { BehaviorSubject, Observable } from 'rxjs';
 
 @Injectable({
   providedIn: 'root'
@@ -24,7 +25,8 @@ export class ProjectsService {
         path: 'https://gleaming-lebkuchen-8e52b2.netlify.app/',
         platform: 'Netlify',
         icon: 'https://www.dropbox.com/scl/fi/nv0sqziekl57wa2qg4jjs/netlify.svg?rlkey=mhea6i30zfcdby88irn2ftxay&raw=1'
-      }
+      },
+      metaTag: ["Replication"]
     },
     {
       title: 'About Page',
@@ -43,7 +45,8 @@ export class ProjectsService {
         path: 'https://gleaming-lebkuchen-8e52b2.netlify.app/',
         platform: 'Netlify',
         icon: 'https://www.dropbox.com/scl/fi/nv0sqziekl57wa2qg4jjs/netlify.svg?rlkey=mhea6i30zfcdby88irn2ftxay&raw=1'
-      }
+      },
+      metaTag: ["Favorites", "Replication"]
     },
     {
       title: 'Backstage Talks',
@@ -62,7 +65,8 @@ export class ProjectsService {
         path: 'https://backstage-talks-lt25a6f36-wanderleedev.vercel.app/#issue1',
         platform: 'Vercel',
         icon: 'https://www.dropbox.com/scl/fi/54fy80ntgxl4afsmrcn25/vercel.webp?rlkey=ogmc9sw41hnde3c45jxu01lmk&raw=1'
-      }
+      },
+      metaTag: ["Favorites", "Replication"]
     },
     {
       title: 'WebVentory',
@@ -81,7 +85,8 @@ export class ProjectsService {
         path: 'https://first-web-angular.vercel.app/',
         platform: 'Vercel',
         icon: 'https://www.dropbox.com/scl/fi/54fy80ntgxl4afsmrcn25/vercel.webp?rlkey=ogmc9sw41hnde3c45jxu01lmk&raw=1'
-      }
+      },
+      metaTag: ["Favorites"]
     },
     {
       title: 'Job List',
@@ -100,7 +105,8 @@ export class ProjectsService {
         path: 'https://6501f0fe5232ef2560563207--dashing-pie-817a18.netlify.app/',
         platform: 'Netlify',
         icon: 'https://www.dropbox.com/scl/fi/nv0sqziekl57wa2qg4jjs/netlify.svg?rlkey=mhea6i30zfcdby88irn2ftxay&raw=1'
-      }
+      },
+      metaTag: ["Replication", "Frontend Mentor"]
     },
     {
       title: 'Ip Address',
@@ -119,7 +125,8 @@ export class ProjectsService {
         path: 'https://650608deef6fec4371b2c449--venerable-sherbet-350882.netlify.app/',
         platform: 'Netlify',
         icon: 'https://www.dropbox.com/scl/fi/nv0sqziekl57wa2qg4jjs/netlify.svg?rlkey=mhea6i30zfcdby88irn2ftxay&raw=1'
-      }
+      },
+      metaTag: ["Favorites", "Frontend Mentor"]
     },
     {
       title: 'REST Countries',
@@ -138,7 +145,8 @@ export class ProjectsService {
         path: 'https://rest-countries-c20tt2xl0-wanderleedev.vercel.app/',
         platform: 'Vercel',
         icon: 'https://www.dropbox.com/scl/fi/54fy80ntgxl4afsmrcn25/vercel.webp?rlkey=ogmc9sw41hnde3c45jxu01lmk&raw=1'
-      }
+      },
+      metaTag: ["Frontend Mentor"]
     },
     {
       title: 'Translate App',
@@ -157,7 +165,8 @@ export class ProjectsService {
         path: 'https://translate-app-six.vercel.app/',
         platform: 'Vercel',
         icon: 'https://www.dropbox.com/scl/fi/54fy80ntgxl4afsmrcn25/vercel.webp?rlkey=ogmc9sw41hnde3c45jxu01lmk&raw=1'
-      }
+      },
+      metaTag: ["Favorites", "DevChallenges"]
     },
     {
       title: 'Coffee Listing',
@@ -176,15 +185,27 @@ export class ProjectsService {
         path: 'https://coffee-page.vercel.app/',
         platform: 'Vercel',
         icon: 'https://www.dropbox.com/scl/fi/54fy80ntgxl4afsmrcn25/vercel.webp?rlkey=ogmc9sw41hnde3c45jxu01lmk&raw=1'
-      }
+      },
+      metaTag: ["Replication", "DevChallenges"]
     }
   ];
+  private projects$ = new BehaviorSubject<IProjects[]>(this.projects);
 
-  public getProjects(): IProjects[] {
-    return this.projects
+  public getProjects$(): Observable<IProjects[]> {
+    return this.projects$.asObservable();
   }
 
-  public errorEventImg(text: string) {
-    console.log(`Error al cargar la imagen ${text}`);
+  public getFilterProjects (param: string):void  {
+    if (param.toLowerCase() === 'all') {
+      this.updateProjects([...this.projects]);
+      return
+    }
+
+    const productsFilter = this.projects.filter(project => project.metaTag.includes(param));
+    this.updateProjects(productsFilter)
+  }
+
+  private updateProjects(projects: IProjects[]) {
+    this.projects$.next(projects);
   }
 }

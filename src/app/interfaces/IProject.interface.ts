@@ -7,6 +7,7 @@ export interface IProjects {
   technologies: Array<string>,
   extraTools: Array<string | never>,
   deploy: IDeploy,
+  metaTag: string[]
 }
 
 export interface IDeploy {

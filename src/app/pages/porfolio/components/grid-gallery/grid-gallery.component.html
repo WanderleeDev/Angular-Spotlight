@@ -1,19 +1,32 @@
-<section id="projects" class="h-full text-white  text-center max-w-6xl mx-auto">
+<section id="projects" class="text-white text-center max-w-6xl mx-auto">
   <header class="flex flex-wrap justify-between items-center">
-    <h2 class="text-2xl sm:text-3xl font-semibold group  py-8 flex sm:justify-between px-8 items-center">
+    <h2 class="text-2xl sm:text-3xl font-semibold group py-8 flex sm:justify-between px-8 items-center">
       {{ titleGallery }}
     </h2>
 
-    <div class="grid items-center grid-cols-[auto_auto] sm:gap-8 sm:py-8 overflow-hidden px-7 mx-auto sm:mx-[initial]">
-      <app-cube3d />
-      <app-nav-filter />
-    </div>
+    <app-nav-filter [filterProjectsHandler]="filterProjects" />
   </header>
 
-  <div class="grid grid-cols-colResponsive  gap-8 p-8">
-    <app-card-project *ngFor="let project of listProjects"
-      [project]="project"
-    />
+  <div class="grid grid-cols-colResponsive gap-8 p-8">
+
+    <ng-container *ngIf="(listProjects | async) as projects">
+      <app-card-project
+        *ngFor="let project of projects"
+        [project]="project"
+      />
+
+      <div
+        class="grid place-content-center h-[70dvh] gap-8"
+        *ngIf="!projects ||projects.length <= 0"
+      >
+        <app-cube3d class="mx-auto"></app-cube3d>
+        <p class="font-medium text-xl lg:text-2xl">
+          Still no projects 😢
+        </p>
+      </div>
+    </ng-container>
+
   </div>
 </section>
+
 <app-lightbox />

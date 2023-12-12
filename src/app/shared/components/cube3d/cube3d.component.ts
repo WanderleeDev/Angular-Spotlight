@@ -6,5 +6,5 @@ import { Component } from '@angular/core';
   styleUrls: ['./cube3d.component.css']
 })
 export class Cube3dComponent {
-
+  readonly cubeSides = ['A', 'B', 'C', 'D', 'E', 'F'];
 }

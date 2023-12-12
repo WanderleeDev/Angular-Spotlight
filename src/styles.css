@@ -5,7 +5,7 @@
 
 @layer utilities {
   .calcHeight {
-    height: calc(100dvh - 2.5rem);
+    height: calc(100dvh - 2rem);
   }
 
   .text-balance {
