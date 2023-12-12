@@ -1,0 +1,19 @@
+<section class="grid place-content-center place-items-center bg-[#040205] h-[100dvh]">
+  <div class="max-w-xs relative h-80 aspect-square ">
+    <img  class="object-cover select-none w-full"
+      ngSrc="https://www.dropbox.com/scl/fi/eonl72ko0r9cp0fbiuorb/404.webp?rlkey=t3in2oil3sb6l3bdhe4j7ap3x&raw=1"
+      alt="error img"
+      fill priority
+    />
+  </div>
+  <h1 class="font-black text-xl text-white">
+    NOT FOUND
+  </h1>
+  <p class="py-4 text-center text-base font-semibold text-white">
+    The route you want to access does not exist:
+    <span class="error-url block py-4 text-sm tracking-wider font-light underline cursor-not-allowed">
+      {{ url }}
+    </span>
+  </p>
+  <app-btn-gradient routerLink="" />
+</section>

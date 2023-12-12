@@ -1,14 +1,15 @@
 import { Component, OnInit } from '@angular/core';
 import { initFlowbite } from 'flowbite';
-initFlowbite
 
 @Component({
   selector: 'app-root',
-  templateUrl: './app.component.html'
+  template: '<router-outlet>',
+  styles: [`:host {
+    display: block;
+    min-height: 100dvh;
+  }`]
 })
 export class AppComponent implements OnInit {
-  title = 'EntryPageAngular';
-
   ngOnInit(): void {
     initFlowbite();
   }

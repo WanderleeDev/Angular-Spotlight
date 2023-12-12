@@ -1,0 +1,17 @@
+<nav class="py-4 rounded-md z-10">
+  <ul class="flex  gap-4 text-white font-medium text-base" #nav>
+    <li *ngFor="let data of dataNav">
+      <button
+        type="button"
+        class="flex items-center gap-2 rounded-md p-1 px-2 relative btn hover:scale-105 active:scale-95 transition-transform"
+        [title]="data.name"
+        #btn
+      >
+        {{data.icon }}
+        <div class="hidden sm:block">
+          {{ data.name}}
+        </div>
+      </button>
+    </li>
+  </ul>
+</nav>

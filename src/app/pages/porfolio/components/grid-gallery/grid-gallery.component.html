@@ -1,0 +1,19 @@
+<section id="projects" class="h-full text-white  text-center max-w-6xl mx-auto">
+  <header class="flex flex-wrap justify-between items-center">
+    <h2 class="text-2xl sm:text-3xl font-semibold group  py-8 flex sm:justify-between px-8 items-center">
+      {{ titleGallery }}
+    </h2>
+
+    <div class="grid items-center grid-cols-[auto_auto] sm:gap-8 sm:py-8 overflow-hidden px-7 mx-auto sm:mx-[initial]">
+      <app-cube3d />
+      <app-nav-filter />
+    </div>
+  </header>
+
+  <div class="grid grid-cols-colResponsive  gap-8 p-8">
+    <app-card-project *ngFor="let project of listProjects"
+      [project]="project"
+    />
+  </div>
+</section>
+<app-lightbox />
