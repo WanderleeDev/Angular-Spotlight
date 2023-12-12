@@ -7,7 +7,7 @@ interface ISvgSizes {
 @Component({
   selector: 'app-angular',
   templateUrl: './angular.component.html',
-  styles: ['host: { display: contents }']
+  styles: [':host { display: contents }']
 })
 export class AngularComponent {
   @Input() sizes: ISvgSizes  = { 'width': 30, 'height': 30 };

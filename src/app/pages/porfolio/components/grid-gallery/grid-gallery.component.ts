@@ -8,7 +8,7 @@ import { Observable } from 'rxjs';
 @Component({
   selector: 'app-grid-gallery',
   templateUrl: './grid-gallery.component.html',
-  styles: ['host: { display: contents }']
+  styles: [':host { display: contents }']
 })
 export class GridGalleryComponent implements OnInit {
   @Input({ required: true }) titleGallery = 'My gallery'

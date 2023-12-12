@@ -3,7 +3,7 @@ import { Component, ElementRef, Input, QueryList, ViewChildren } from '@angular/
 @Component({
   selector: 'app-nav-filter',
   templateUrl: './nav-filter.component.html',
-  styles: ['host:{ display: contents}']
+  styles: [':host{ display: contents}']
 })
 export class NavFilterComponent   {
   @ViewChildren('btn') listBtn!:QueryList<ElementRef<HTMLButtonElement>>;

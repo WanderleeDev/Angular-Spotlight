@@ -3,7 +3,7 @@ import { Component, Input } from '@angular/core';
 @Component({
   selector: 'app-btn-base',
   templateUrl: './btn-base.component.html',
-  styles: [`host: { display: contents; }`]
+  styles: [`:host { display: contents; }`]
 })
 export class BtnBaseComponent {
   @Input({required: true})btnModifier: 'primary' | 'secondary' = 'primary';
