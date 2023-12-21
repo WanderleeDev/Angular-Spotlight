@@ -45,8 +45,7 @@ export class ProjectsService {
         path: 'https://gleaming-lebkuchen-8e52b2.netlify.app/',
         platform: 'Netlify',
         icon: 'https://www.dropbox.com/scl/fi/nv0sqziekl57wa2qg4jjs/netlify.svg?rlkey=mhea6i30zfcdby88irn2ftxay&raw=1'
-      },
-      metaTag: ["Favorites", "Replication"]
+      },      metaTag: ["Replication"]
     },
     {
       title: 'Backstage Talks',
@@ -187,6 +186,26 @@ export class ProjectsService {
         icon: 'https://www.dropbox.com/scl/fi/54fy80ntgxl4afsmrcn25/vercel.webp?rlkey=ogmc9sw41hnde3c45jxu01lmk&raw=1'
       },
       metaTag: ["Replication", "DevChallenges"]
+    },
+    {
+      title: 'Github Profile',
+      cover: 'https://www.dropbox.com/scl/fi/olj658tpi40rig36ah2zm/github-profile-mockup.webp?rlkey=kce96iyq0ng7u1pyolnaogvpw&raw=1',
+      video: 'https://www.loom.com/embed/41ddb7b3775545c585a405a49541e7be?sid=cfcd0809-036b-47c9-9106-8401fce96535',
+      img: [
+        'https://www.dropbox.com/scl/fi/tffh5c13uodq8h47onwsn/github-profile-screen.webp?rlkey=7grd6d81rppwk9zvusf3brj9g&raw=1',
+        'https://www.dropbox.com/scl/fi/zn8crem6depkyyvnb3jxv/ipAddress-FullPage.webp?rlkey=oh695z72vpuavju1obny1gq59&raw=1',
+        'https://www.dropbox.com/scl/fi/1k18cd1cy3y79iv1kyt2q/github-profile-resp.webp?rlkey=4v6hwqv7lmzm8ayyrgtsspmnq&raw=1'
+      ],
+      description: "Github user profile finder, where the github api is consumed to obtain the user's data and in the same data comes another URL to obtain their repositories, chaining the requests through the use of more specific observables (ForkJoin). Use of services to store and centralize data and implementation of skeleton, loader and error messages.",
+      technologies: ['Angular', 'TypeScript', 'TailwindCss'],
+      extraTools: ['Api Github'],
+      deploy: {
+        repository: 'https://github.com/WanderleeDev/DevChallenges/tree/main/Frontend/github-profile',
+        path: 'https://github-profile-pi-five.vercel.app/',
+        platform: 'Vercel',
+        icon: 'https://www.dropbox.com/scl/fi/54fy80ntgxl4afsmrcn25/vercel.webp?rlkey=ogmc9sw41hnde3c45jxu01lmk&raw=1'
+      },
+      metaTag: ["Replication", "DevChallenges", "Favorites"]
     }
   ];
   private projects$ = new BehaviorSubject<IProjects[]>(this.projects);
