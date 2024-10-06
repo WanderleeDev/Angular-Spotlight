@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { EmailJsService } from 'src/app/services/email-js.service';
 
 @Component({
   selector: 'app-contact',
@@ -7,7 +8,9 @@ import { Component } from '@angular/core';
 export class ContactComponent {
   inputValue = '';
 
-  public sendMail() {
-    console.log(this.inputValue);
+  constructor(private readonly emailJsSvc: EmailJsService) {}
+
+  public async sendMail(e: Event): Promise<void> {
+    await this.emailJsSvc.sendEmail(e)
   }
 }

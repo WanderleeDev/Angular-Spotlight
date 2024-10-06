@@ -1,25 +1,37 @@
-<div id="contact" class="h-screen flex items-center justify-center p-12 py-6 max-w-6xl mx-auto md:overflow-x-hidden">
-  <div class="w-full py-10 ">
+<div
+  id="contact"
+  class="h-screen flex items-center justify-center p-12 py-6 max-w-6xl mx-auto md:overflow-x-hidden"
+>
+  <div class="w-full py-10">
     <div class="grid gap-5 md:grid-cols-2 md:gap-10 lg:gap-20">
       <article class="flex items-center">
         <div class="mx-auto md:mx-0">
           <h3 class="text-4xl font-bold text-white">Subscribe</h3>
-          <p class="mt-2 max-w-[20rem] text-lg text-white/80">Join our weekly digest. You'll also receive some of our best posts today.</p>
-          <form class="mt-4 flex flex-col"
-            (submit)="sendMail()"
-            #FormContact="ngForm">
+          <p class="mt-2 max-w-[20rem] text-lg text-white/80">
+            Join our weekly digest. You'll also receive some of our best posts
+            today.
+          </p>
+          <form
+            class="mt-4 flex flex-col"
+            (ngSubmit)="sendMail($event)"
+            #FormContact="ngForm"
+          >
             <input
-            class="w-full rounded border border-purple-400 bg-transparent px-3 py-2 text-white placeholder:text-white/50 md:max-w-[18rem]"
-            type="email"
-            name="email"
-            id="email"
-            #mail="ngModel"
-            [(ngModel)]="inputValue"
-            placeholder="Enter your email"
-            pattern="[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}"
-            required/>
-            <div class="text-red-600" *ngIf="mail.getError('email')">*Ingresa un formato de correo</div>
-            <app-btn-form-submit [isDisabled]="FormContact.invalid"/>
+              class="w-full rounded border border-purple-400 bg-transparent px-3 py-2 text-white placeholder:text-white/50 md:max-w-[18rem]"
+              type="email"
+              name="email"
+              id="email"
+              #mail="ngModel"
+              [(ngModel)]="inputValue"
+              placeholder="Enter your email"
+              pattern="[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}"
+              required
+            />
+            <div class="text-red-600" *ngIf="mail.getError('email')">
+              *Ingresa un formato de correo
+            </div>
+            {{FormContact.submitted}}
+            <app-btn-form-submit [isDisabled]="FormContact.invalid" />
           </form>
         </div>
       </article>
