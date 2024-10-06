@@ -13,6 +13,8 @@ export class SeoService {
   private readonly _meta: Meta = inject(Meta);
 
   public setCanonicalURL(url: string): void {
+    if (!URL.canParse(url)) throw new Error(`Invalid URL: ${url}`);
+
     this._meta.updateTag({ name: 'canonical', content: url });
   }
 

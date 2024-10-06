@@ -1,12 +1,17 @@
 import { Component, OnInit } from '@angular/core';
-import { initFlowbite } from 'flowbite';
 import { SeoService } from './services/seo.service';
 import { environment } from 'src/environments/environment.development';
 import { Metadata, OpenGraph } from './shared/interfaces/Metadata.interface';
+import { FlowbiteService } from './services/flowbite.service';
 
 @Component({
   selector: 'app-root',
-  template: '<router-outlet>',
+  template: `
+    <ng-container>
+      <ngx-sonner-toaster closeButton position="top-center" />
+      <router-outlet />
+    </ng-container>
+  `,
   styles: [
     `
       :host {
@@ -44,7 +49,10 @@ export class AppComponent implements OnInit {
     keywords: this.keywords,
   };
 
-  constructor(private readonly seoSvc: SeoService) {
+  constructor(
+    private readonly seoSvc: SeoService,
+    private readonly flowbiteSvc: FlowbiteService
+  ) {
     this.seoSvc.applyIndexFollow();
     this.seoSvc.setCanonicalURL(environment.CANONICAL_URL);
     this.seoSvc.updateMetaTags({
@@ -54,6 +62,6 @@ export class AppComponent implements OnInit {
   }
 
   ngOnInit(): void {
-    initFlowbite();
+    this.flowbiteSvc.loadFlowbite();
   }
 }

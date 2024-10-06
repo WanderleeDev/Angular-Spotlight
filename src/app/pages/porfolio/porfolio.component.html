@@ -1,7 +1,18 @@
 <app-header/>
 <main>
   <app-banner />
-  <app-grid-gallery titleGallery="My projects" />
-  <app-contact />
+
+  @defer (on viewport) {
+    <app-grid-gallery titleGallery="My projects" />
+  } @placeholder {
+    <app-cube3d class="mx-auto h-dvh content-center" />
+  }
+
+  @defer (on viewport) {
+    <app-contact />
+  } @placeholder {
+    <app-cube3d class="mx-auto h-dvh content-center" />
+  }
+
 </main>
 <app-footer />

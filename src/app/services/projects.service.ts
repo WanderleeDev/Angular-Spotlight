@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core';
 //  interface
-import { IProjects } from '../interfaces/IProject.interface';
+import { IProjects } from '../shared/interfaces/IProject.interface';
 import { BehaviorSubject, Observable } from 'rxjs';
 
 @Injectable({

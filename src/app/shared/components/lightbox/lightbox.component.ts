@@ -4,7 +4,7 @@ import { Subscription } from 'rxjs';
 import { LightboxManagerService } from 'src/app/services/lightbox-manager.service';
 import { IframeManagerService } from 'src/app/services/iframe-manager.service';
 //  interface
-import { IProjects } from 'src/app/interfaces/IProject.interface';
+import { IProjects } from 'src/app/shared/interfaces/IProject.interface';
 
 @Component({
   selector: 'app-lightbox',

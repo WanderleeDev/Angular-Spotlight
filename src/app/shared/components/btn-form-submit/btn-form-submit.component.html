@@ -2,7 +2,7 @@
   <button class="mt-4 w-full font-bold max-w-[14rem] rounded px-14 py-2 text-center text-white bg-purple-800 hover:scale-105 active:scale-95 duration-200 border-purple-500 border-[1px] shadow-md shadow-purple-800 disabled:cursor-not-allowed disabled:hover:scale-100 disabled:active:scale-100 disabled:bg-purple-950 peer"
   type="submit"
   [disabled]="isDisabled">
-    Subscribe
+    {{ isSubmitting ? 'Sending ...' : 'Send message' }}
   </button>
   <span class="absolute left-0 bottom-0 translate-y-[110%] text-xs opacity-0 peer-hover:opacity-100 duration-200 text-red-300"
   *ngIf="isDisabled"

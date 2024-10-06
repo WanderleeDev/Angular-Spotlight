@@ -16,6 +16,7 @@ import { TagsContainerComponent } from './components/lightbox/components/tags-co
 import { IframeDemoComponent } from './components/iframe-demo/iframe-demo.component';
 import { Cube3dComponent } from './components/cube3d/cube3d.component';
 import { NavFilterComponent } from './components/nav-filter/nav-filter.component';
+import { ToastComponent } from './components/toast/toast.component';
 
 
 @NgModule({
@@ -36,6 +37,7 @@ import { NavFilterComponent } from './components/nav-filter/nav-filter.component
     IframeDemoComponent,
     Cube3dComponent,
     NavFilterComponent,
+    ToastComponent
   ],
   imports: [
     CommonModule,

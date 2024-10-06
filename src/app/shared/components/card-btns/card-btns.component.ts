@@ -1,5 +1,5 @@
 import { Component, Input } from '@angular/core';
-import { IProjects } from 'src/app/interfaces/IProject.interface';
+import { IProjects } from 'src/app/shared/interfaces/IProject.interface';
 import { LightboxManagerService } from 'src/app/services/lightbox-manager.service';
 @Component({
   selector: 'app-card-btns',

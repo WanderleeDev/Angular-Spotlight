@@ -1,5 +1,5 @@
 import { Component, Input, OnInit } from '@angular/core';
-import { IDeploy } from 'src/app/interfaces/IProject.interface';
+import { IDeploy } from 'src/app/shared/interfaces/IProject.interface';
 // services
 import { IframeManagerService } from 'src/app/services/iframe-manager.service';
 

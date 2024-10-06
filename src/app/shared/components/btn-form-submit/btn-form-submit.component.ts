@@ -5,5 +5,6 @@ import { Component, Input } from '@angular/core';
   templateUrl: './btn-form-submit.component.html',
 })
 export class BtnFormSubmitComponent {
-  @Input() isDisabled!:boolean | null;
+  @Input({ required: true }) isSubmitting = false;
+  @Input({ required: true }) isDisabled!: boolean | null;
 }
