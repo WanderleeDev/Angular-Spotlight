@@ -90,6 +90,9 @@ importers:
       '@angular/localize':
         specifier: 18.2.7
         version: 18.2.7(@angular/compiler-cli@18.2.7(@angular/compiler@18.2.7(@angular/core@18.2.7(rxjs@7.8.1)(zone.js@0.14.10)))(typescript@5.4.5))(@angular/compiler@18.2.7(@angular/core@18.2.7(rxjs@7.8.1)(zone.js@0.14.10)))
+      '@ngx-env/builder':
+        specifier: 18.0.1
+        version: 18.0.1(esbuild@0.23.0)(webpack@5.94.0(esbuild@0.23.0))
       '@types/express':
         specifier: ^4.17.17
         version: 4.17.21
@@ -991,6 +994,19 @@ packages:
     resolution: {integrity: sha512-boghen8F0Q8D+0/Q1/1r6DUEieUJ8w2a1gIknExMSHBsJFOr2+0KUfHiVYBvucPwl3+RU5PFBK833FjFCh3BhA==}
     engines: {node: '>=14.17.0'}
 
+  '@dotenv-run/core@1.3.5':
+    resolution: {integrity: sha512-jwXSX/r4VIGUOd/xqRjD5QUYRhKhKOmhhFSPDaIOsajFL+LVYBGADTFcakZ5O9x2BOGxDjIVUJzIE8jTpJ29JA==}
+
+  '@dotenv-run/esbuild@1.4.0':
+    resolution: {integrity: sha512-pXT4qARGRtWtL+/8MVGNc+oatVeNjK5Y415IjxMnGfriMwYuAwz5cWHB4YHIUTpPjkVCxsnPVb4wwr888IuN3g==}
+    peerDependencies:
+      esbuild: 0.21.3
+
+  '@dotenv-run/webpack@1.4.0':
+    resolution: {integrity: sha512-gQKOdSWs4iYaJ628A3YpPbM0XJvdCg44Wck1kL+UuumRboGcPoq5M35KKmrBQ/abjGeawrZyYimD4T1PiZ9bCA==}
+    peerDependencies:
+      webpack: ^5.0.0
+
   '@emailjs/browser@4.4.1':
     resolution: {integrity: sha512-DGSlP9sPvyFba3to2A50kDtZ+pXVp/0rhmqs2LmbMS3I5J8FSOgLwzY2Xb4qfKlOVHh29EAutLYwe5yuEZmEFg==}
     engines: {node: '>=14.0.0'}
@@ -1495,6 +1511,9 @@ packages:
       '@angular/compiler-cli': ^18.0.0
       typescript: '>=5.4 <5.6'
       webpack: ^5.54.0
+
+  '@ngx-env/builder@18.0.1':
+    resolution: {integrity: sha512-zADxSVnhbRqRSWJI09481JNFdsApAwPynDY1UeHWp5BGFI7Qur1fyqjV8ZMqAHhzOv35Z0Wb4JEm8d1/ukQTIg==}
 
   '@nodelib/fs.scandir@2.1.5':
     resolution: {integrity: sha512-vq24Bq3ym5HEQm2NKCr3yXDwjc7vTsEThRDnkp2DK9p1uqLR+DHurm/NOTo0KG7HYHU7eppKZj3MyqYuMBf62g==}
@@ -2553,6 +2572,14 @@ packages:
 
   domutils@3.1.0:
     resolution: {integrity: sha512-H78uMmQtI2AhgDJjWeQmHwJJ2bLPD3GMmO7Zja/ZZh84wkm+4ut+IUnUdRa8uCGX88DiVx1j6FRe1XfxEgjEZA==}
+
+  dotenv-expand@10.0.0:
+    resolution: {integrity: sha512-GopVGCpVS1UKH75VKHGuQFqS1Gusej0z4FyQkPdwjil2gNIv+LNsqBlboOzpJFZKVT95GkCyWJbBSdFEFUWI2A==}
+    engines: {node: '>=12'}
+
+  dotenv@16.4.5:
+    resolution: {integrity: sha512-ZmdL2rui+eB2YwhsWzjInR8LldtZHGDoQ1ugH85ppHKwpUHL7j7rN0Ti9NCnGiQbhaZ11FpR+7ao1dNsmduNUg==}
+    engines: {node: '>=12'}
 
   eastasianwidth@0.2.0:
     resolution: {integrity: sha512-I88TYZWc9XiYHRQ4/3c5rjjfgkjhLyW2luGIheGERbNQ6OY7yTybanSpDXZa8y7VUP9YmDcYa+eyq4ca7iLqWA==}
@@ -5100,7 +5127,7 @@ snapshots:
     dependencies:
       '@ampproject/remapping': 2.3.0
       '@angular-devkit/architect': 0.1802.7(chokidar@3.6.0)
-      '@angular-devkit/build-webpack': 0.1802.7(chokidar@3.6.0)(webpack-dev-server@5.0.4(webpack@5.94.0))(webpack@5.94.0(esbuild@0.23.0))
+      '@angular-devkit/build-webpack': 0.1802.7(chokidar@3.6.0)(webpack-dev-server@5.0.4(webpack@5.94.0(esbuild@0.23.0)))(webpack@5.94.0(esbuild@0.23.0))
       '@angular-devkit/core': 18.2.7(chokidar@3.6.0)
       '@angular/build': 18.2.7(eal56xn55jpenfcsp3l7wgwth4)
       '@angular/compiler-cli': 18.2.7(@angular/compiler@18.2.7(@angular/core@18.2.7(rxjs@7.8.1)(zone.js@0.14.10)))(typescript@5.4.5)
@@ -5158,8 +5185,8 @@ snapshots:
       vite: 5.4.6(@types/node@18.19.54)(less@4.2.0)(sass@1.77.6)(terser@5.31.6)
       watchpack: 2.4.1
       webpack: 5.94.0(esbuild@0.23.0)
-      webpack-dev-middleware: 7.4.2(webpack@5.94.0)
-      webpack-dev-server: 5.0.4(webpack@5.94.0)
+      webpack-dev-middleware: 7.4.2(webpack@5.94.0(esbuild@0.23.0))
+      webpack-dev-server: 5.0.4(webpack@5.94.0(esbuild@0.23.0))
       webpack-merge: 6.0.1
       webpack-subresource-integrity: 5.1.0(webpack@5.94.0(esbuild@0.23.0))
     optionalDependencies:
@@ -5186,12 +5213,12 @@ snapshots:
       - utf-8-validate
       - webpack-cli
 
-  '@angular-devkit/build-webpack@0.1802.7(chokidar@3.6.0)(webpack-dev-server@5.0.4(webpack@5.94.0))(webpack@5.94.0(esbuild@0.23.0))':
+  '@angular-devkit/build-webpack@0.1802.7(chokidar@3.6.0)(webpack-dev-server@5.0.4(webpack@5.94.0(esbuild@0.23.0)))(webpack@5.94.0(esbuild@0.23.0))':
     dependencies:
       '@angular-devkit/architect': 0.1802.7(chokidar@3.6.0)
       rxjs: 7.8.1
       webpack: 5.94.0(esbuild@0.23.0)
-      webpack-dev-server: 5.0.4(webpack@5.94.0)
+      webpack-dev-server: 5.0.4(webpack@5.94.0(esbuild@0.23.0))
     transitivePeerDependencies:
       - chokidar
 
@@ -6261,6 +6288,23 @@ snapshots:
 
   '@discoveryjs/json-ext@0.6.1': {}
 
+  '@dotenv-run/core@1.3.5':
+    dependencies:
+      chalk: 4.1.2
+      dotenv: 16.4.5
+      dotenv-expand: 10.0.0
+      find-up: 5.0.0
+
+  '@dotenv-run/esbuild@1.4.0(esbuild@0.23.0)':
+    dependencies:
+      '@dotenv-run/core': 1.3.5
+      esbuild: 0.23.0
+
+  '@dotenv-run/webpack@1.4.0(webpack@5.94.0(esbuild@0.23.0))':
+    dependencies:
+      '@dotenv-run/core': 1.3.5
+      webpack: 5.94.0(esbuild@0.23.0)
+
   '@emailjs/browser@4.4.1': {}
 
   '@esbuild/aix-ppc64@0.21.5':
@@ -6641,6 +6685,15 @@ snapshots:
       '@angular/compiler-cli': 18.2.7(@angular/compiler@18.2.7(@angular/core@18.2.7(rxjs@7.8.1)(zone.js@0.14.10)))(typescript@5.4.5)
       typescript: 5.4.5
       webpack: 5.94.0(esbuild@0.23.0)
+
+  '@ngx-env/builder@18.0.1(esbuild@0.23.0)(webpack@5.94.0(esbuild@0.23.0))':
+    dependencies:
+      '@dotenv-run/esbuild': 1.4.0(esbuild@0.23.0)
+      '@dotenv-run/webpack': 1.4.0(webpack@5.94.0(esbuild@0.23.0))
+      glob: 10.4.5
+    transitivePeerDependencies:
+      - esbuild
+      - webpack
 
   '@nodelib/fs.scandir@2.1.5':
     dependencies:
@@ -7769,6 +7822,10 @@ snapshots:
       dom-serializer: 2.0.0
       domelementtype: 2.3.0
       domhandler: 5.0.3
+
+  dotenv-expand@10.0.0: {}
+
+  dotenv@16.4.5: {}
 
   eastasianwidth@0.2.0: {}
 
@@ -10100,7 +10157,7 @@ snapshots:
       mkdirp: 1.0.4
       yallist: 4.0.0
 
-  terser-webpack-plugin@5.3.10(esbuild@0.23.0)(webpack@5.94.0):
+  terser-webpack-plugin@5.3.10(esbuild@0.23.0)(webpack@5.94.0(esbuild@0.23.0)):
     dependencies:
       '@jridgewell/trace-mapping': 0.3.25
       jest-worker: 27.5.1
@@ -10274,7 +10331,7 @@ snapshots:
 
   weak-lru-cache@1.2.2: {}
 
-  webpack-dev-middleware@7.4.2(webpack@5.94.0):
+  webpack-dev-middleware@7.4.2(webpack@5.94.0(esbuild@0.23.0)):
     dependencies:
       colorette: 2.0.20
       memfs: 4.12.0
@@ -10285,7 +10342,7 @@ snapshots:
     optionalDependencies:
       webpack: 5.94.0(esbuild@0.23.0)
 
-  webpack-dev-server@5.0.4(webpack@5.94.0):
+  webpack-dev-server@5.0.4(webpack@5.94.0(esbuild@0.23.0)):
     dependencies:
       '@types/bonjour': 3.5.13
       '@types/connect-history-api-fallback': 1.5.4
@@ -10315,7 +10372,7 @@ snapshots:
       serve-index: 1.9.1
       sockjs: 0.3.24
       spdy: 4.0.2
-      webpack-dev-middleware: 7.4.2(webpack@5.94.0)
+      webpack-dev-middleware: 7.4.2(webpack@5.94.0(esbuild@0.23.0))
       ws: 8.18.0
     optionalDependencies:
       webpack: 5.94.0(esbuild@0.23.0)
@@ -10360,7 +10417,7 @@ snapshots:
       neo-async: 2.6.2
       schema-utils: 3.3.0
       tapable: 2.2.1
-      terser-webpack-plugin: 5.3.10(esbuild@0.23.0)(webpack@5.94.0)
+      terser-webpack-plugin: 5.3.10(esbuild@0.23.0)(webpack@5.94.0(esbuild@0.23.0))
       watchpack: 2.4.1
       webpack-sources: 3.2.3
     transitivePeerDependencies:
