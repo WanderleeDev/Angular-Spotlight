@@ -4,10 +4,10 @@ declare interface Env {
   // Replace the following with your own environment variables.
   // Example: NGX_VERSION: string;
   [key: string]: any;
-  readonly NGX_EMAIL_JS_KEY: string
-  readonly NGX_EMAIL_JS_SERVICE_ID: string
-  readonly NGX_EMAIL_JS_TEMPLATE_ID: string
-  readonly NGX_CANONICAL_URL: string
+  readonly NG_EMAIL_JS_KEY: string;
+  readonly NG_EMAIL_JS_SERVICE_ID: string;
+  readonly NG_EMAIL_JS_TEMPLATE_ID: string;
+  readonly NG_CANONICAL_URL: string;
 }
 
 // Choose how to access the environment variables.

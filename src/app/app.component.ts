@@ -1,8 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { SeoService } from './services/seo.service';
-import { environment } from 'src/environments/environment.development';
 import { Metadata, OpenGraph } from './shared/interfaces/Metadata.interface';
 import { FlowbiteService } from './services/flowbite.service';
+import { environment } from 'src/environments/environment.development';
 
 @Component({
   selector: 'app-root',
@@ -53,6 +53,7 @@ export class AppComponent implements OnInit {
     private readonly seoSvc: SeoService,
     private readonly flowbiteSvc: FlowbiteService
   ) {
+
     this.seoSvc.applyIndexFollow();
     this.seoSvc.setCanonicalURL(environment.CANONICAL_URL);
     this.seoSvc.updateMetaTags({

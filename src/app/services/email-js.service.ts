@@ -1,14 +1,15 @@
 import { Injectable } from '@angular/core';
 import emailjs, { EmailJSResponseStatus } from '@emailjs/browser';
-import { environment } from 'src/environments/environment.development';
 import { toast } from 'ngx-sonner';
 import { ToastComponent } from '../shared/components/toast/toast.component';
+import { environment } from 'src/environments/environment.development';
 
 @Injectable({
   providedIn: 'root',
 })
 export class EmailJsService {
   public async sendEmail(form: HTMLFormElement): Promise<void> {
+    
     try {
       const response = await emailjs.sendForm(
         environment.EMAIL_JS_SERVICE_ID,
