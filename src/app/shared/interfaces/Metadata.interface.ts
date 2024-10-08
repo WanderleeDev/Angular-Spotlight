@@ -35,7 +35,7 @@ export interface OpenGraph extends MetaIndex {
   'twitter:site': string;
   'twitter:title': string;
   'twitter:description': string;
-  'twitter:image:src': string;
+  'twitter:image': string;
 }
 
 export interface MetaTagConfig {

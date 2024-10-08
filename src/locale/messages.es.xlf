@@ -1,0 +1,151 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<xliff version="1.2" xmlns="urn:oasis:names:tc:xliff:document:1.2">
+  <file source-language="en" datatype="plaintext" original="ng2.template" target-language="es">
+    <body>
+      <trans-unit id="7574229038357766713" datatype="html">
+        <source>I invite you to explore my growth at Angular through these mini projects. Each project reflects my dedication and learning.</source>
+        <target>Te invito a explorar mi crecimiento en Angular a través de estos mini proyectos. Cada proyecto refleja mi dedicación y aprendizaje.</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/app.component.ts</context>
+          <context context-type="linenumber">25</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="7258704755923999135" datatype="html">
+        <source>Entry Page Angular</source>
+        <target>Página de Entrada Angular</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/app.component.ts</context>
+          <context context-type="linenumber">26</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="2682970582183460640" datatype="html">
+        <source>my projects angular, css, tailwind, responsive design, typescript</source>
+        <target>mis proyectos angular, css, tailwind, diseño responsivo, typescript</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/app.component.ts</context>
+          <context context-type="linenumber">30</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="1574151092063108017" datatype="html">
+        <source> See what I can do with Angular ✌️ </source>
+        <target> Mira lo que puedo hacer con Angular ✌️ </target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/pages/porfolio/components/banner/banner.component.html</context>
+          <context context-type="linenumber">7,8</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="6298527953038964495" datatype="html">
+        <source> I invite you to explore my growth at Angular through these mini projects. Each project reflects my dedication and learning. </source>
+        <target> Te invito a explorar mi crecimiento en Angular a través de estos mini proyectos. Cada proyecto refleja mi dedicación y aprendizaje. </target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/pages/porfolio/components/banner/banner.component.html</context>
+          <context context-type="linenumber">13,14</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="myProjectsBtn" datatype="html">
+        <source>My Projects</source>
+        <target>Mis Proyectos</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/pages/porfolio/components/banner/banner.component.ts</context>
+          <context context-type="linenumber">12</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="myProjectsAlt" datatype="html">
+        <source>go to Angular projects</source>
+        <target>ir a proyectos de Angular</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/pages/porfolio/components/banner/banner.component.ts</context>
+          <context context-type="linenumber">14</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="reactProjectsBtn" datatype="html">
+        <source>React Projects</source>
+        <target>Proyectos React</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/pages/porfolio/components/banner/banner.component.ts</context>
+          <context context-type="linenumber">18</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="reactProjectsAlt" datatype="html">
+        <source>go to React projects</source>
+        <target>ir a proyectos de React</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/pages/porfolio/components/banner/banner.component.ts</context>
+          <context context-type="linenumber">20</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="1153721192129533394" datatype="html">
+        <source>Contact me</source>
+        <target>Contáctame</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/pages/porfolio/components/contact/contact.component.html</context>
+          <context context-type="linenumber">9,10</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="5042526768607404170" datatype="html">
+        <source> Let&apos;s develop a project together and share knowledge 🚀🚀🚀 </source>
+        <target> Desarrollemos un proyecto juntos y compartamos conocimiento 🚀🚀🚀 </target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/pages/porfolio/components/contact/contact.component.html</context>
+          <context context-type="linenumber">11</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="497866648465563902" datatype="html">
+        <source>Enter your message and contact</source>
+        <target>Ingresa tu mensaje y contacto</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/pages/porfolio/components/contact/contact.component.html</context>
+          <context context-type="linenumber">26,27</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="5094122320494944526" datatype="html">
+        <source>Mini projects</source>
+        <target>Mini proyectos</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/pages/porfolio/components/header/header.component.html</context>
+          <context context-type="linenumber">10,11</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="7752848848235338438" datatype="html">
+        <source>Open main menu</source>
+        <target>Abrir menú principal</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/pages/porfolio/components/header/header.component.html</context>
+          <context context-type="linenumber">141,142</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="2821179408673282599" datatype="html">
+        <source>Home</source>
+        <target>Inicio</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/pages/porfolio/components/header/header.component.html</context>
+          <context context-type="linenumber">179</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="7091571651222742304" datatype="html">
+        <source>Projects</source>
+        <target>Proyectos</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/pages/porfolio/components/header/header.component.html</context>
+          <context context-type="linenumber">191,192</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="7922989125096435449" datatype="html">
+        <source>Contact</source>
+        <target>Contacto</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/pages/porfolio/components/header/header.component.html</context>
+          <context context-type="linenumber">204,205</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="643584322459251952" datatype="html">
+        <source>Complete the previous field of the email</source>
+        <target>Completa el campo anterior del correo electrónico</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/shared/components/btn-form-submit/btn-form-submit.component.html</context>
+          <context context-type="linenumber">13,15</context>
+        </context-group>
+      </trans-unit>
+    </body>
+  </file>
+</xliff>

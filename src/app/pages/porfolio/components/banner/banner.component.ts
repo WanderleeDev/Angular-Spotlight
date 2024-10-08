@@ -9,15 +9,15 @@ export class BannerComponent {
   btns: BtnBase[] = [
     {
       modifier: 'primary',
-      text: 'My Projects',
+      text: $localize`:@@myProjectsBtn:My Projects`,
       redirection: '#projects',
-      alt: 'go to Angular projects'
+      alt: $localize`:@@myProjectsAlt:go to Angular projects`
     },
     {
       modifier: 'secondary',
-      text: 'React Projects',
+      text: $localize`:@@reactProjectsBtn:React Projects`,
       redirection: 'https://react-showcase-three.vercel.app/',
-      alt: 'go to React projects'
+      alt: $localize`:@@reactProjectsAlt:go to React projects`
     },
   ];
 }

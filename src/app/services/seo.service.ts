@@ -4,22 +4,35 @@ import {
   MetaTagConfig,
   MetaIndex,
 } from '../shared/interfaces/Metadata.interface';
+import { DOCUMENT } from '@angular/common';
 
 @Injectable({
   providedIn: 'root',
 })
 export class SeoService {
-  private readonly _title: Title = inject(Title);
-  private readonly _meta: Meta = inject(Meta);
+  readonly #title: Title = inject(Title);
+  readonly #meta: Meta = inject(Meta);
+  readonly #document: Document = inject(DOCUMENT);
 
   public setCanonicalURL(url: string): void {
     if (!URL.canParse(url)) throw new Error(`Invalid URL: ${url}`);
 
-    this._meta.updateTag({ name: 'canonical', content: url });
+    const documentHead = this.#document.head;
+    let linkElement: HTMLLinkElement | null = documentHead.querySelector(
+      'link[rel="canonical"]'
+    );
+
+    if (!linkElement) {
+      linkElement = this.#document.createElement('link');
+      linkElement.rel = 'canonical';
+      documentHead.appendChild(linkElement);
+    }
+
+    linkElement.href = url;
   }
 
   public applyIndexFollow(value = true): void {
-    this._meta.updateTag({
+    this.#meta.updateTag({
       name: 'robots',
       content: value ? 'index, follow' : 'noindex, nofollow',
     });
@@ -33,7 +46,7 @@ export class SeoService {
   }
 
   public setTitle(title: string): void {
-    this._title.setTitle(title);
+    this.#title.setTitle(title);
   }
 
   private setMetaTags(objectTags: Partial<MetaIndex | undefined>): void {
@@ -42,12 +55,10 @@ export class SeoService {
     for (const [key, value] of Object.entries(objectTags)) {
       if (value === undefined || value.trim() === '') continue;
 
-      if (key.startsWith('og:')) {
-        this._meta.updateTag({ property: key, content: value });
-      } else if (key.startsWith('twitter:')) {
-        this._meta.updateTag({ name: key, content: value });
+      if (key.startsWith('og:') || key.startsWith('twitter:')) {
+        this.#meta.updateTag({ property: key, content: value });
       } else {
-        this._meta.updateTag({ [key]: value });
+        this.#meta.updateTag({ name: key, content: value });
       }
     }
   }
