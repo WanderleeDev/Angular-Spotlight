@@ -2,6 +2,14 @@
   "version": 2,
   "routes": [
     {
+      "src": "/es/(.*)",
+      "dest": "/es/$1"
+    },
+    {
+      "src": "/en/(.*)",
+      "dest": "/en/$1"
+    },
+    {
       "src": "^/$",
       "has": [
         {
@@ -21,15 +29,6 @@
         "Location": "/en/"
       },
       "status": 308
-    },
-    {
-      "src": "/es/(.*)",
-      "dest": "/es/index.html"
-    },
-    {
-      "src": "/en/(.*)",
-      "dest": "/en/index.html"
     }
-  ],
-  "trailingSlash": true
+  ]
 }
