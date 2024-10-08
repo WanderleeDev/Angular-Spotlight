@@ -10,7 +10,8 @@
     "lint": "ng lint",
     "serve:ssr:EntryPageAngular": "node dist/entry-page-angular/server/server.mjs",
     "start:en": "ng serve --configuration=en",
-    "i18n": "ng extract-i18n --output-path src/locale"
+    "i18n": "ng extract-i18n --output-path src/locale",
+    "vercel": "vercel --prod dist/entry-page-angular/browser/"
   },
   "private": true,
   "dependencies": {

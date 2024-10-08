@@ -1,0 +1,35 @@
+{
+  "version": 2,
+  "routes": [
+    {
+      "src": "^/$",
+      "has": [
+        {
+          "type": "header",
+          "key": "accept-language",
+          "value": "(?:^|,)\\s*es(?:-[^,]*)?(?:,|$)"
+        }
+      ],
+      "headers": {
+        "Location": "/es/"
+      },
+      "status": 308
+    },
+    {
+      "src": "^/$",
+      "headers": {
+        "Location": "/en/"
+      },
+      "status": 308
+    },
+    {
+      "src": "/es/(.*)",
+      "dest": "/es/index.html"
+    },
+    {
+      "src": "/en/(.*)",
+      "dest": "/en/index.html"
+    }
+  ],
+  "trailingSlash": true
+}
