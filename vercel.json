@@ -6,8 +6,8 @@
       "dest": "/es/$1"
     },
     {
-      "src": "/en/(.*)",
-      "dest": "/en/$1"
+      "src": "/en-US/(.*)",
+      "dest": "/en-US/$1"
     },
     {
       "src": "^/$",
@@ -26,7 +26,7 @@
     {
       "src": "^/$",
       "headers": {
-        "Location": "/en/"
+        "Location": "/en-US/"
       },
       "status": 308
     }
