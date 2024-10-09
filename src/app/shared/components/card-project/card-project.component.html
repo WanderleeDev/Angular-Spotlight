@@ -6,7 +6,7 @@
     (error)="error(imgError)"
     fill
     class="z-20 object-cover"
-    [alt]="'img' + project.title ">
+    [alt]="project.title">
   </div>
   <figcaption class="absolute text-transparent text-stroke inset-0 grid items-center text-2xl sm:text-3xl font-semibold tracking-wide group-hover:z-50 group-hover:bg-gradient-to-br group-hover:text-transparent group-hover:select-none group-hover:from-purple-950/70 to-transparent duration-200 group-hover:pb-60">
     {{project.title}}
@@ -15,9 +15,10 @@
 </figure>
 
 <ng-template #errorImg>
-  <p class="absolute top-1/4 text-center w-full z-30 text-black select-none text-lg font-semibold">Image not found</p>
+  <p i18n class="absolute top-1/4 text-center w-full z-30 text-black select-none text-lg font-semibold">Image not found</p>
   <img [ngSrc]="imgError"
   class="z-20 aspect-square"
-  alt="imagen no disponible"
+  i18n-alt
+  alt="Image not found"
   fill>
 </ng-template>

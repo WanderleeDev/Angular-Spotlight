@@ -1,15 +1,22 @@
-<figure class="relative h-auto w-12/12 overflow-x-hidden borde-2 border-dotted border outline-dotted outline-offset-4 outline-1 outline-violet-200 group scrollStyle scrollWidthMin mx-auto sm:max-w-lg sm:h-80">
-  <img class=" h-full w-full object-cover"
+<figure
+  class="relative h-auto w-12/12 overflow-x-hidden borde-2 border-dotted border outline-dotted outline-offset-4 outline-1 outline-violet-200 group scrollStyle scrollWidthMin mx-auto sm:max-w-lg sm:h-80"
+>
+  <img
+    class="h-full w-full object-cover"
     [src]="mainImg"
+    i18n-alt
     alt="image initial"
     fill
+  />
+  <figcaption
+    class="absolute z-50 bottom-0 px-4 m-1 rounded-lg bg-purple-800 flex gap-2 items-center"
   >
-  <figcaption class="absolute z-50 bottom-0 px-4 m-1 rounded-lg bg-purple-800 flex gap-2 items-center">
     <span>
       <strong>Deploy: </strong>
-      {{deploy.platform }}
+      {{ deploy.platform }}
     </span>
-    <span class="block h-8 w-8 bg-no-repeat bg-min-2 bg-center text-xs bg-black rounded-[50%] m-1"
+    <span
+      class="block h-8 w-8 bg-no-repeat bg-min-2 bg-center text-xs bg-black rounded-[50%] m-1"
       [style.background-image]="'url(' + deploy.icon + ')'"
     >
     </span>
@@ -17,20 +24,24 @@
 </figure>
 
 <div class="flex flex-wrap gap-4 justify-center mt-12 justify-items-center">
-  <button class="border-white border relative w-16 h-16"
+  <button
+    class="border-white border relative w-16 h-16"
     type="button"
-    *ngFor="let img of listImages, index as i"
+    *ngFor="let img of listImages; index as i"
+    i18n-aria-label
     [attr.aria-label]="'change image ' + (i + 1)"
     (click)="changeImage(img)"
   >
-  <img [ngSrc]="img" [alt]="'image ' + (i + 1)"fill>
-    {{i + 1}}
+    <img [ngSrc]="img" i18n-alt [alt]="'image ' + (i + 1)" fill />
+    {{ i + 1 }}
   </button>
-  <button class="border-purple-800 border-2 relative w-16 h-16 bg-play-svg bg-no-repeat bg-base-size bg-center bg-white"
+  <button
+    class="border-purple-800 border-2 relative w-16 h-16 bg-play-svg bg-no-repeat bg-base-size bg-center bg-white"
+    i18n-title
     title="video demo"
+    i18n-aria-label
     aria-label="video demo"
     type="button"
     (click)="appearIframe()"
-  >
-  </button>
+  ></button>
 </div>

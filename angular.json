@@ -13,7 +13,7 @@
         "sourceLocale": "en",
         "locales": {
           "es": {
-            "translation": "src/locale/messages.es.xlf"
+            "translation": "src/locale/messages.es.json"
           }
         }
       },
@@ -26,7 +26,7 @@
         "build": {
           "builder": "@ngx-env/builder:application",
           "options": {
-            "localize": ["es", "en"],
+            "localize": ["en"],
             "outputPath": {
               "base": "dist/entry-page-angular"
             },

@@ -8,6 +8,7 @@ import { Component } from '@angular/core';
       type="button"
       title="to home"
       aria-label="to home"
+      i18n
     >
       Back to Home
     </button>
