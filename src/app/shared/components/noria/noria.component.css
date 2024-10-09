@@ -97,7 +97,7 @@
   }
 }
 
-@media (min-width: 40rem) {
+@media screen and (min-width: 48rem) {
   .containerNoria {
     width: 15rem;
     height: 15rem;
@@ -106,9 +106,7 @@
     display: grid;
     place-items: center;
   }
-}
 
-@media screen and (min-width: 48rem) {
   .noria {
     top: 0;
   }
