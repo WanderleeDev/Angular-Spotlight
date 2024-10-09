@@ -1,5 +1,5 @@
 {
-  "locale": "en",
+  "locale": "en-US",
   "translations": {
     "7574229038357766713": "I invite you to explore my growth at Angular through these mini projects. Each project reflects my dedication and learning.",
     "7258704755923999135": "Entry Page Angular",
@@ -13,10 +13,18 @@
     "1153721192129533394": "Contact me",
     "5042526768607404170": " Let's develop a project together and share knowledge 🚀🚀🚀 ",
     "497866648465563902": "Enter your message and contact",
+    "2446117790692479672": "Resources",
+    "5963686596883376866": "Follow us",
+    "5937251202465808296": "More",
+    "5366629400608742109": " © 2023 Development by {$START_LINK} WanderleeDev {$CLOSE_LINK}",
     "5094122320494944526": "Mini projects",
     "2821179408673282599": "Home",
     "7091571651222742304": "Projects",
     "7922989125096435449": "Contact",
+    "2431029777406490708": "My projects",
+    "2882802773388131228": "Email sent successfully!",
+    "461719497762604034": "Failure sending email. Error:",
+    "3615876387635281962": "System error sending email.",
     "7708270344948043036": " {$INTERPOLATION} ",
     "643584322459251952": "Complete the previous field of the email",
     "8740036082299980043": "Send message",
@@ -28,6 +36,18 @@
     "2646058129880881718": " Repository ",
     "2024375199920614501": "image initial",
     "314460745577991031": "video demo",
-    "1578972590705526440": "Angular system"
+    "1616102757855967475": "All",
+    "4085930761302974863": "Favorites",
+    "3296002115428304662": "Collaborative",
+    "1578972590705526440": "Angular system",
+    "5518529353443613237": "Copy of a help section page. Practicing separation by components and use of structural directives and styles applied using the Scss preprocessor.",
+    "8480122710455590559": "Copy an entry page as changing images by scrolling, each new image changes the background color of the page. Styles applied with Scss in addition to conditional styles.",
+    "6504992512109757280": "Web page of a simple inventory that is saved in a table, you can create several tables, such as delete them. Use of reactive forms and communication between components.",
+    "1168003528977630537": "Page developed following the specifications of Frontend Mentor, a list of jobs that can be filtered based on parameters or tag. Use of services and observables to share and communicate data.",
+    "7843325135842662629": "Page developed following the specifications of Frontend Mentor, a geolocation that will be reflected on a map. Consumption of two Apis for the resolution of this test, in addition to entering the page for the first time seeks the location of the user automatically, the geolocation is referential and based on several factors.",
+    "6437221831078615763": "Page developed with Angular, it consumes an api that provides country information to re-enderize content, allows searching by name or also by selecting continent in the drop-down menu, implementation of routes and use of observables to share data and use of the Flobite component library",
+    "4786851085633339666": "Developed in angular 17, following the indications of DevChallenges. Sending parameters in the url and implementing text-to-speech reading using the browser's native API. Designed with mobile first and responsive design in mind.",
+    "497679047953762147": "Developed with Angular 17, testing for the first time the new syntax and lazy view loading. Using HTTPClient to consume a simple list and filter it.",
+    "1029860173296807189": "Github user profile finder, where the github api is consumed to obtain the user's data and in the same data comes another URL to obtain their repositories, chaining the requests through the use of more specific observables (ForkJoin). Use of services to store and centralize data and implementation of skeleton, loader and error messages."
   }
 }

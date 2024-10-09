@@ -10,10 +10,11 @@
   "projects": {
     "EntryPageAngular": {
       "i18n": {
-        "sourceLocale": "en",
+        "sourceLocale": "en-US",
         "locales": {
           "es": {
-            "translation": "src/locale/messages.es.json"
+            "translation": "src/locale/messages.es.json",
+            "baseHref": "/es/"
           }
         }
       },
@@ -26,7 +27,7 @@
         "build": {
           "builder": "@ngx-env/builder:application",
           "options": {
-            "localize": ["en"],
+            "localize": ["en-US"],
             "outputPath": {
               "base": "dist/entry-page-angular"
             },
@@ -87,7 +88,7 @@
               "buildTarget": "EntryPageAngular:build:development"
             },
             "options": {
-              "localize": ["es", "en"]
+              "localize": ["es", "en-US"]
             }
           },
           "defaultConfiguration": "development"

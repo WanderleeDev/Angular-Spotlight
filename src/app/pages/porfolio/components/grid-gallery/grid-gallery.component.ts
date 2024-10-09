@@ -1,4 +1,4 @@
-import { Component, Input, OnInit } from '@angular/core';
+import { ChangeDetectionStrategy, Component, Input, OnInit } from '@angular/core';
 //  services
 import { ProjectsService } from 'src/app/services/projects.service';
 // interfaces
@@ -8,18 +8,16 @@ import { Observable } from 'rxjs';
 @Component({
   selector: 'app-grid-gallery',
   templateUrl: './grid-gallery.component.html',
-  styles: [':host { display: contents }']
+  styles: [':host { display: contents }'],
+  changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class GridGalleryComponent implements OnInit {
-  @Input({ required: true }) titleGallery = 'My gallery'
+  @Input({ required: true }) titleGallery = 'My gallery';
   listProjects?: Observable<IProjects[]>;
-  filterProjects?: (param: string) => void;
 
-  constructor(private projectsSvc: ProjectsService,) {
-    this.filterProjects = this.projectsSvc.getFilterProjects.bind(this.projectsSvc);
-  }
+  constructor(private projectsSvc: ProjectsService) {}
 
   ngOnInit(): void {
-    this.listProjects = this.projectsSvc.getProjects$();
+    this.listProjects = this.projectsSvc.getProjects$()
   }
 }

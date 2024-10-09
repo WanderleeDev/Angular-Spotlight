@@ -3,8 +3,8 @@
     <li *ngFor="let data of dataNav; let i = index">
       <button
         class="flex items-center gap-2 rounded-md p-1 px-2 relative btn hover:scale-105 active:scale-95 transition-transform"
-        (click)="handleCLick(i, data.name)"
-        [ngClass]="{ 'bg-purple-600': i === 0 }"
+        (click)="onClick(data.filter, i)"
+        [ngClass]="{ 'bg-purple-600': i === currentBtn }"
         type="button"
         [title]="data.name"
         i18n-aria-label

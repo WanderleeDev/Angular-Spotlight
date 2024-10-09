@@ -9,8 +9,8 @@
     "test": "ng test",
     "lint": "ng lint",
     "serve:ssr:EntryPageAngular": "node dist/entry-page-angular/server/server.mjs",
-    "start:en": "ng serve --configuration=en",
-    "i18n": "ng extract-i18n --output-path src/locale --format=json",
+    "start:en": "ng serve --configuration=es",
+    "i18n": "ng extract-i18n --output-path src/locale --format=json --progress",
     "vercel": "vercel --prod dist/entry-page-angular/browser/"
   },
   "private": true,
