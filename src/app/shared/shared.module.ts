@@ -17,7 +17,8 @@ import { IframeDemoComponent } from './components/iframe-demo/iframe-demo.compon
 import { Cube3dComponent } from './components/cube3d/cube3d.component';
 import { NavFilterComponent } from './components/nav-filter/nav-filter.component';
 import { ToastComponent } from './components/toast/toast.component';
-
+import { DropdownComponent } from './components/dropdown/dropdown.component';
+import { DeferComponent } from './components/defer/defer.component';
 
 @NgModule({
   declarations: [
@@ -37,12 +38,11 @@ import { ToastComponent } from './components/toast/toast.component';
     IframeDemoComponent,
     Cube3dComponent,
     NavFilterComponent,
-    ToastComponent
+    ToastComponent,
+    DropdownComponent,
+    DeferComponent
   ],
-  imports: [
-    CommonModule,
-    NgOptimizedImage
-  ],
+  imports: [CommonModule, NgOptimizedImage],
   exports: [
     NoriaComponent,
     BtnGradientComponent,
@@ -53,7 +53,9 @@ import { ToastComponent } from './components/toast/toast.component';
     NoriaComponent,
     BtnFormSubmitComponent,
     LightboxComponent,
-    Cube3dComponent
-  ]
+    Cube3dComponent,
+    DropdownComponent,
+    DeferComponent
+  ],
 })
-export class SharedModule { }
+export class SharedModule {}

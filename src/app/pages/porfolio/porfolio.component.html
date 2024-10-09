@@ -1,18 +1,11 @@
-<app-header/>
+<app-header />
 <main>
   <app-banner />
-
-  @defer (on viewport) {
+  <app-defer deferId="projects">
+  <app-grid-gallery titleGallery="My projects" />
+  </app-defer>
+  <app-defer deferId="projects">
     <app-grid-gallery titleGallery="My projects" />
-  } @placeholder {
-    <app-cube3d class="mx-auto h-dvh content-center" />
-  }
-
-  @defer (on viewport) {
-    <app-contact />
-  } @placeholder {
-    <app-cube3d class="mx-auto h-dvh content-center" />
-  }
-
+    </app-defer>
 </main>
 <app-footer />
