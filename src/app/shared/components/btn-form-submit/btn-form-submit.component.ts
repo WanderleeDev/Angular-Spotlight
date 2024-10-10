@@ -10,7 +10,6 @@ export class BtnFormSubmitComponent implements OnChanges {
   label: string = $localize`Send message`;
 
   ngOnChanges(changes: SimpleChanges): void {
-    console.log(changes['isSubmitting']?.currentValue);
     if (changes['isSubmitting']) {
       this.label = changes['isSubmitting'].currentValue
         ? $localize`Sending...`

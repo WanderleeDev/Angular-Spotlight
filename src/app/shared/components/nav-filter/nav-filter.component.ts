@@ -20,12 +20,9 @@ export class NavFilterComponent {
   ];
   currentBtn = 0;
 
-
   constructor(private readonly projectsSvc: ProjectsService) {}
 
   public onClick(filter: Filters, index = 0): void {
-    console.log(filter);
-
     this.projectsSvc.getProjectBy(filter);
     this.currentBtn = index;
   }

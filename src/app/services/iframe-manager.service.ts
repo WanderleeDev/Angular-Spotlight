@@ -28,6 +28,5 @@ export class IframeManagerService {
 
   public toggleIframeView () {
     this.isViewIframe.next(!this.isViewIframe.value)
-    console.log(this.isViewIframe.getValue());
   }
 }
