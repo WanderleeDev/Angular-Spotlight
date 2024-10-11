@@ -11,7 +11,7 @@
       [ngSrc]="flag"
       [alt]="defaultLanguage"
     />
-    <span class="hidden sm:block"> {{defaultLanguage}} </span>
+    <span class="hidden sm:block"> {{ defaultLanguage }} </span>
   </button>
   <div
     class="z-50 hidden my-4 text-base list-none bg-white/80 divide-y divide-gray-100 rounded-lg shadow dark:bg-gray-700"
@@ -20,7 +20,9 @@
     <ul class="py-2 font-medium" role="none">
       <li *ngFor="let language of languages">
         <a
-          href="https://entry-page-angular.vercel.app/en/"
+          [href]="
+            'https://entry-page-angular.vercel.app/' + language.code + '/'
+          "
           class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 dark:text-gray-400 dark:hover:bg-gray-600 dark:hover:text-white"
           role="menuitem"
         >
@@ -34,7 +36,7 @@
               [alt]="'flag ' + language.name"
             />
 
-            {{language.name}}
+            {{ language.name }}
           </div>
         </a>
       </li>
