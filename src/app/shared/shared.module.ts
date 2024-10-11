@@ -5,7 +5,7 @@ import { BtnGradientComponent } from './components/btn-gradient/btn-gradient.com
 import { BtnBaseComponent } from './components/btn-base/btn-base.component';
 import { AngularComponent } from './icons/angular/angular.component';
 import { ReactComponent } from './icons/react/react.component';
-import { GridGalleryComponent } from '../pages/porfolio/components/grid-gallery/grid-gallery.component';
+import { GridGalleryComponent } from './components/grid-gallery/grid-gallery.component';
 import { CardProjectComponent } from './components/card-project/card-project.component';
 import { CardBtnsComponent } from './components/card-btns/card-btns.component';
 import { BtnFormSubmitComponent } from './components/btn-form-submit/btn-form-submit.component';
@@ -19,6 +19,9 @@ import { NavFilterComponent } from './components/nav-filter/nav-filter.component
 import { ToastComponent } from './components/toast/toast.component';
 import { DropdownComponent } from './components/dropdown/dropdown.component';
 import { DeferComponent } from './components/defer/defer.component';
+import { PaginatorComponent } from './components/paginator/paginator.component';
+import { EmptyProjectComponent } from './components/empty-project/empty-project.component';
+import { PaginationPipe } from './pipes/pagination.pipe';
 
 @NgModule({
   declarations: [
@@ -40,7 +43,10 @@ import { DeferComponent } from './components/defer/defer.component';
     NavFilterComponent,
     ToastComponent,
     DropdownComponent,
-    DeferComponent
+    DeferComponent,
+    PaginatorComponent,
+    EmptyProjectComponent,
+    PaginationPipe,
   ],
   imports: [CommonModule, NgOptimizedImage],
   exports: [
@@ -55,7 +61,8 @@ import { DeferComponent } from './components/defer/defer.component';
     LightboxComponent,
     Cube3dComponent,
     DropdownComponent,
-    DeferComponent
+    DeferComponent,
+    PaginationPipe,
   ],
 })
 export class SharedModule {}

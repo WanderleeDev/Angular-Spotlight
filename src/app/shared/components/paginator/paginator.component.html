@@ -1,0 +1,12 @@
+<div class="flex justify-end px-8 gap-4">
+  <button
+    class="grid place-content-center active:scale-95 bg-purple-800 border-[1px] border-purple-500 duration-200 size-8 hover:scale-110 p-2 rounded-md shadow-md shadow-purple-800 text-sm font-medium"
+    [ngClass]="{ 'opacity-50': currentPage !== page }"
+    (click)="onChangePage(page)"
+    alt-title
+    [title]="'change page ' + page"
+    *ngFor="let page of btns"
+  >
+    {{ page }}
+  </button>
+</div>

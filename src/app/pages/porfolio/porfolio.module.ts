@@ -1,6 +1,5 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { SharedModule } from 'src/app/shared/shared.module';
 import { FormsModule } from '@angular/forms';
 
 import { PorfolioComponent } from './porfolio.component';
@@ -9,6 +8,7 @@ import { HeaderComponent } from './components/header/header.component';
 import { BannerComponent } from './components/banner/banner.component';
 import { ContactComponent } from './components/contact/contact.component';
 import { FooterComponent } from './components/footer/footer.component';
+import { SharedModule } from 'src/app/shared/shared.module';
 
 
 
@@ -18,13 +18,13 @@ import { FooterComponent } from './components/footer/footer.component';
     HeaderComponent,
     BannerComponent,
     ContactComponent,
-    FooterComponent
+    FooterComponent,
   ],
   imports: [
     CommonModule,
     PorfolioRoutingModule,
-    SharedModule,
-    FormsModule
+    FormsModule,
+    SharedModule
   ]
 })
 export class PorfolioModule { }

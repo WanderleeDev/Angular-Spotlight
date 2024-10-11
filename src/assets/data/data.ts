@@ -43,7 +43,7 @@ export const projects: IProjects[] = [
       platform: 'Vercel',
       icon: 'https://www.dropbox.com/scl/fi/54fy80ntgxl4afsmrcn25/vercel.webp?rlkey=ogmc9sw41hnde3c45jxu01lmk&raw=1',
     },
-    metaTag: ['favorites', 'replication'],
+    metaTag: ['replication'],
   },
   {
     title: 'WebVentory',
@@ -64,7 +64,7 @@ export const projects: IProjects[] = [
       platform: 'Vercel',
       icon: 'https://www.dropbox.com/scl/fi/54fy80ntgxl4afsmrcn25/vercel.webp?rlkey=ogmc9sw41hnde3c45jxu01lmk&raw=1',
     },
-    metaTag: ['favorites'],
+    metaTag: [],
   },
   {
     title: 'Job List',
@@ -152,7 +152,7 @@ export const projects: IProjects[] = [
       platform: 'Vercel',
       icon: 'https://www.dropbox.com/scl/fi/54fy80ntgxl4afsmrcn25/vercel.webp?rlkey=ogmc9sw41hnde3c45jxu01lmk&raw=1',
     },
-    metaTag: ['favorites', 'devChallenges'],
+    metaTag: ['devChallenges'],
   },
   {
     title: 'Coffee Listing',

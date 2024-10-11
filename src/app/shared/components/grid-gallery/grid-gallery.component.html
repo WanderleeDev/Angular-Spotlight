@@ -1,0 +1,33 @@
+<section id="projects" class="text-white text-center max-w-6xl mx-auto">
+  <header class="flex flex-wrap justify-between items-center">
+    <h2
+      class="text-2xl sm:text-3xl font-semibold group py-8 flex sm:justify-between px-8 items-center"
+    >
+      {{ titleGallery }}
+    </h2>
+
+    <app-nav-filter />
+  </header>
+
+  <ng-container *ngIf="listProjects | async as projects">
+    <div class="grid-container p-8" *ngIf="!projects || projects.length >= 0; else empty">
+      <app-card-project
+        *ngFor="
+          let project of projects | pagination : currentPage : CARD_PER_VIEW
+        "
+        [project]="project"
+      />
+    </div>
+    <app-paginator
+      [numberPages]="projects.length"
+      [cardPerView]="CARD_PER_VIEW"
+      (current)="changePage($event)"
+    />
+  </ng-container>
+</section>
+
+<app-lightbox />
+
+<ng-template #empty>
+  <app-empty-project />
+</ng-template>
