@@ -1,20 +1,20 @@
-<div class="flex gap-8 justify-center relative z-50 duration-200 opacity-0 pointer-events-none group-hover:opacity-100 group-hover:-translate-y-10 group-hover:pointer-events-auto">
+<div class="flex gap-8 justify-center relative z-50 duration-200 opacity-0 pointer-events-none group-hover:opacity-100 group-hover:-translate-y-14 group-hover:pointer-events-auto">
   <button *ngIf="hasBtnComplementary"
     type="button"
-    class="bg-view-svg"
+    class="bg-view-svg size-12"
     [class]="btnCard"
     [title]="'View more information of ' + project.title"
     [attr.aria-label]="'View more information of ' + project.title"
     (click)="lightBoxHandler(project)">
   </button>
-  <a class="bg-gitHub-svg"
+  <a class="bg-gitHub-svg size-12"
     [class]="btnCard"
     [href]="project.deploy.repository"
     target="_blank"
     [attr.aria-label]="'go to GitHub ' + project.title"
     [title]="'go to GitHub ' + project.title">
   </a>
-  <a class="bg-code-svg"
+  <a class="bg-code-svg size-12"
     [class]="btnCard"
     [href]="project.deploy.path"
     target="_blank"

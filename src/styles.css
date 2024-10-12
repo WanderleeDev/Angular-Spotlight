@@ -69,4 +69,12 @@
       transform: translateY(1rem)
     }
   }
+
+  .u-start-opacity {
+    transition: opacity 0.1s linear;
+
+    @starting-style {
+      opacity: 0;
+    }
+  }
 }

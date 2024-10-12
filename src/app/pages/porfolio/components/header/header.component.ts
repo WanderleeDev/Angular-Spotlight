@@ -6,10 +6,15 @@ import { Component } from '@angular/core';
   styleUrls: ['./header.css']
 })
 export class HeaderComponent {
-  styleLiChild  = 'block py-2 pl-3 pr-4  rounded hover:bg-purple-500  md:px-4 md:py-1';
+  styleLiChild  = 'block py-2 pl-3 pr-4  rounded hover:bg-purple-600  md:px-4 md:py-1';
   activeLink = 0;
+  isViewMenu = false;
 
   public setActiveLink(index: number) {
     this.activeLink = index;
+  }
+
+  public toggleMenu(): void {
+    this.isViewMenu = !this.isViewMenu;
   }
 }

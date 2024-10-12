@@ -1,7 +1,7 @@
-<div class="flex items-center md:order-2 gap-2">
+<div class="flex items-center gap-2">
   <button
+    (click)="toggleDropdown()"
     type="button"
-    data-dropdown-toggle="language-dropdown-menu"
     class="inline-flex items-center font-medium justify-center gap-2 px-4 py-2 text-sm text-white rounded-lg cursor-pointer hover:bg-purple-100 hover:text-gray-700"
   >
     <img
@@ -9,22 +9,22 @@
       width="20"
       height="20"
       [ngSrc]="flag"
-      [alt]="defaultLanguage"
+      alt-i18n
+      alt="flag icon"
     />
     <span class="hidden sm:block"> {{ defaultLanguage }} </span>
   </button>
   <div
-    class="z-50 hidden my-4 text-base list-none bg-white/80 divide-y divide-gray-100 rounded-lg shadow dark:bg-gray-700"
-    id="language-dropdown-menu"
+    *ngIf="isViewDropdown"
+    class="z-50 absolute top-0 translate-y-2/4 my-4 text-base list-none bg-white/80 divide-y divide-gray-100 rounded-lg shadow dark:bg-gray-700 u-start-opacity"
   >
-    <ul class="py-2 font-medium" role="none">
+    <ul class="py-2 font-medium">
       <li *ngFor="let language of languages">
         <a
           [href]="
             'https://entry-page-angular.vercel.app/' + language.code + '/'
           "
           class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 dark:text-gray-400 dark:hover:bg-gray-600 dark:hover:text-white"
-          role="menuitem"
         >
           <div class="inline-flex items-center gap-2">
             <img
@@ -42,28 +42,5 @@
       </li>
     </ul>
   </div>
-  <button
-    data-collapse-toggle="navbar-language"
-    type="button"
-    class="inline-flex items-center p-2 w-10 h-10 justify-center text-sm text-white hover:text-black rounded-lg md:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:hover:bg-gray-700 dark:focus:ring-gray-600"
-    aria-controls="navbar-language"
-    aria-expanded="false"
-  >
-    <span class="sr-only" i18n>Open main menu</span>
-    <svg
-      class="w-5 h-5"
-      aria-hidden="true"
-      xmlns="http://www.w3.org/2000/svg"
-      fill="none"
-      viewBox="0 0 17 14"
-    >
-      <path
-        stroke="currentColor"
-        stroke-linecap="round"
-        stroke-linejoin="round"
-        stroke-width="2"
-        d="M1 1h15M1 7h15M1 13h15"
-      />
-    </svg>
-  </button>
+
 </div>

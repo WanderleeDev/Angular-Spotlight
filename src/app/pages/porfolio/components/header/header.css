@@ -1,3 +1,7 @@
 .active {
-  @apply block py-2 pl-3 pr-4 text-white bg-purple-500 rounded md:bg-purple-500 md:text-white md:px-4 md:py-1 font-bold
+  @apply block py-2 pl-3 pr-4 text-white bg-purple-600 rounded md:bg-purple-600 md:text-white md:px-4 md:py-1 font-bold;
+}
+
+.show-menu {
+  @apply block;
 }

@@ -13,6 +13,7 @@ export class DropdownComponent {
   flag = 'assets/svg/en.svg';
   languageCode = 'en-US';
   defaultLanguage = $localize `English`;
+  isViewDropdown = false;
 
   languages = [
     { name: $localize `English`, code: 'en-US', icon: 'assets/svg/en.svg' },
@@ -31,5 +32,9 @@ export class DropdownComponent {
       this.flag = newLanguage.icon
       this.defaultLanguage = newLanguage.name
     });
+  }
+
+  public toggleDropdown() {
+    this.isViewDropdown = !this.isViewDropdown;
   }
 }
