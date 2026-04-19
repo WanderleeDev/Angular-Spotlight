@@ -2,6 +2,33 @@ import { IProjects } from 'src/app/shared/interfaces/IProject.interface';
 
 export const projects: IProjects[] = [
   {
+    title: 'Ngx-theme-stack',
+    cover:
+      'https://www.dropbox.com/scl/fi/eq8aobflknrwlaoq4bgdu/thumbnail.webp?rlkey=063f5w0liyotr8ofw3a24e2ot&st=dl065l7r&raw=1',
+    video: 'https://www.loom.com/embed/deab9189a1d7404b9e0b43dc50bffd36',
+    img: [
+      'https://www.dropbox.com/scl/fi/eq8aobflknrwlaoq4bgdu/thumbnail.webp?rlkey=063f5w0liyotr8ofw3a24e2ot&st=dl065l7r&raw=1',
+      'https://www.dropbox.com/scl/fi/spcye2jal4tj2d2x2dofa/npm.webp?rlkey=rmeajn6fpgrhmiztmdunedfom&st=0b8ljzeu&raw=1',
+    ],
+    description: $localize`Modern, SSR-safe Angular library for managing dark mode, light mode, and custom themes via Angular Signals. A reusable component library for theme management.`,
+    technologies: ['Angular', 'TypeScript', 'Angular Signals', 'SSR'],
+    extraTools: ['npm', 'Angular Library'],
+    deploy: {
+      repository: 'https://github.com/WanderleeDev/ngx-theme-stack',
+      path: 'https://demo-ngx-theme-stack.wanderlee.site/',
+      platform: 'Cloudflare',
+      icon: 'https://www.vectorlogo.zone/logos/cloudflare/cloudflare-icon.svg',
+    },
+    metaTag: [
+      'library',
+      'theming',
+      'dark-mode',
+      'angular-signals',
+      'ssr',
+      'favorites',
+    ],
+  },
+  {
     title: 'Help Page',
     cover:
       'https://www.dropbox.com/scl/fi/sb0vtsax06aam7gybq36n/helpPage-cover.webp?rlkey=1uy29v27cwk13mxpd7nurh0c3&raw=1',
@@ -282,5 +309,5 @@ export const projects: IProjects[] = [
       icon: 'https://www.dropbox.com/scl/fi/54fy80ntgxl4afsmrcn25/vercel.webp?rlkey=ogmc9sw41hnde3c45jxu01lmk&raw=1',
     },
     metaTag: ['favorites', 'standalone'],
-  }
+  },
 ];

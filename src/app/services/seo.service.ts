@@ -1,10 +1,10 @@
-import { Injectable, inject } from '@angular/core';
-import { Title, Meta } from '@angular/platform-browser';
-import {
-  MetaTagConfig,
-  MetaIndex,
-} from '../shared/interfaces/Metadata.interface';
 import { DOCUMENT } from '@angular/common';
+import { Injectable, inject } from '@angular/core';
+import { Meta, Title } from '@angular/platform-browser';
+import {
+  MetaIndex,
+  MetaTagConfig,
+} from '../shared/interfaces/Metadata.interface';
 
 @Injectable({
   providedIn: 'root',
@@ -19,7 +19,7 @@ export class SeoService {
 
     const documentHead = this.#document.head;
     let linkElement: HTMLLinkElement | null = documentHead.querySelector(
-      'link[rel="canonical"]'
+      'link[rel="canonical"]',
     );
 
     if (!linkElement) {
