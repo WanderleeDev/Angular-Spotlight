@@ -229,8 +229,7 @@ export const projects: IProjects[] = [
     title: 'Learn and teach',
     cover:
       'https://www.dropbox.com/scl/fi/3qj6dfbn7hh35svnv026o/cover-learn-and-teach.webp?rlkey=e0vujal07w23oc0nsng9jqi1m&st=zjetgpe5&raw=1',
-    video:
-      'https://www.loom.com/embed/41ddb7b3775545c585a405a49541e7be?sid=cfcd0809-036b-47c9-9106-8401fce96535',
+    video: 'https://www.loom.com/embed/4945e15252cc490ba5133470206e20cb',
     img: [
       'https://www.dropbox.com/scl/fi/7xry5o58x2qunpxtgswpe/learn-and-teach.webp?rlkey=qhyb9sj69ux8r0axt83h5byh9&st=5n349atw&raw=1',
       'https://www.dropbox.com/scl/fi/d9q2tfx5q65hvpnrk31ys/learn-and-teach-resp.webp?rlkey=73cwmqva1vpw1nmeavb3iza2l&st=g2fq0rnw&raw=1',
@@ -251,8 +250,7 @@ export const projects: IProjects[] = [
     title: 'Preguntonic',
     cover:
       'https://www.dropbox.com/scl/fi/jltgwm3buii1dqv2r9jqp/preguntonic-cover.webp?rlkey=tg1i2qsshgsg0cpbiy9kll50n&st=wjsdikl8&raw=1',
-    video:
-      'https://www.loom.com/embed/41ddb7b3775545c585a405a49541e7be?sid=cfcd0809-036b-47c9-9106-8401fce96535',
+    video: 'https://www.loom.com/embed/f95c58e5dda64b20bc836428dcab0a72',
     img: [
       'https://www.dropbox.com/scl/fi/7dthtmzkkzs3wlvwgpgj8/preguntonic.webp?rlkey=jovvcmnzgg8e8f8bno95vgy1a&st=g47m9gcn&raw=1',
       'https://www.dropbox.com/scl/fi/fzyc81zo0bmgiyvf1xv9y/preguntonic-resp.webp?rlkey=umpmg6d5n90lprj06lr3cytaz&st=lsb62lbw&raw=1',
